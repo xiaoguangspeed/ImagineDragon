@@ -30,3 +30,12 @@ const program = new command.Command(packageJson.name)
   console.log(root)
 
   const originalDir = process.cwd();
+
+  // require
+  // console.log("require cache:",require.cache);
+  console.log('chalk:',require.resolve('chalk'));
+
+  var eles = [1,2,3].map(function(ele,index){
+    return ele+1;
+  })
+  console.log(eles)
