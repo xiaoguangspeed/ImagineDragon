@@ -8,7 +8,7 @@ class App extends Component {
       <div className="App">
         <h5 className="forumName"
           style={{color:"#03fa87"}}
-        >BlockChain Forum</h5>
+        >where</h5>
       </div>
     );
   }
