@@ -3,12 +3,15 @@ package main
 import(
 	"fmt"
 	"strings"
+	"math"
+	"os"
 )
 
 type UrlCollect struct{
-	URL1 string `yes`
 }
 func main(){
+	fmt.Printf("%T\n",os.Stdout)  
+	var arr = [4]byte{1,2,3,4}
 	//slice literal
 	drinks := []string{"coffee","cola"}
 	fmt.Println(drinks)
@@ -40,8 +43,25 @@ func main(){
 	alice ,ok := ages["alice"]
 	fmt.Println(alice,ok)
 	fmt.Println(ages)
+	// 
+	fmt.Println("math.sqrt2",math.Sqrt2)
+	// interface
+	var i I = T{"hello interface"}
+	i.M()
 }
 
 func printSlice(s []int){
 	fmt.Println(s,len(s),cap(s))
 }
+// interface
+type I interface{
+	M()
+}
+
+type T struct{
+	s string
+}
+func (t T) M() {
+	fmt.Println(t.s)
+}
+
