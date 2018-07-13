@@ -6,6 +6,7 @@ const fs = require('fs');
 
 const packageJson  = require('./package.json');
 let projectName;
+let consoleOut = {};
 
 const program = new command.Command(packageJson.name)
   .version("0.0.1")
@@ -16,7 +17,14 @@ const program = new command.Command(packageJson.name)
   })
   .parse(process.argv);
 
-  var root = path.resolve();  //解析生成一个绝对路径
+  consoleOut.root = path.resolve();  //解析生成一个绝对路径
+  consoleOut.originalDir = process.cwd();
+  
+    // require
+    // console.log("require cache:",require.cache);
+  consoleOut.chalk = require.resolve('chalk');
+  consoleOut.relativePath = path.resolve(__dirname,"../..");//当前文件夹的父文件夹的父文件夹
+
   const JsonObj = {
     name: 'appName',
     version: '0.1.0',
@@ -24,18 +32,14 @@ const program = new command.Command(packageJson.name)
   };
 
   fs.writeFileSync(
-      path.join(root+'/output.json'),
+      path.join(consoleOut.root+'/output.json'),
       JSON.stringify(JsonObj,null,2)
   )
-  console.log(root)
 
-  const originalDir = process.cwd();
 
-  // require
-  // console.log("require cache:",require.cache);
-  console.log('chalk:',require.resolve('chalk'));
+  
 
-  var eles = [1,2,3].map(function(ele,index){
-    return ele+1;
-  })
-  console.log(eles)
+  // 输出consoleOut的keys
+  Object.keys(consoleOut).forEach(ele => {
+    console.log(chalk.red(ele),consoleOut[ele])
+  });
