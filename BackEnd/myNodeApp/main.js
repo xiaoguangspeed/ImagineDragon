@@ -1,5 +1,6 @@
-var fn = function(){
-  console.log('this is in fn')
+var fn = function(pkg,args){
+  console.log('this is in fn');
+  console.log(pkg);
 }
 var pm = new Promise((resolve,reject) => {
   //执行一些异步操作
@@ -25,3 +26,5 @@ function reducer(state){
 }
 
 console.log(reducer(state));
+// new 
+var fnIns = new fn();
