@@ -2,5 +2,5 @@ BackEnd/blockchain/go-ethereum-master
 BackEnd/blockchain/privateChain/chaindata
 BackEnd/blockchain/go-ethereum-master.zip
 BackEnd/myNodeApp/cliApp/node_modules
-BackEnd/myNodeApp/web3/node_modules
+BackEnd/Nodejs/web3js/node_modules
 FrontEnd/myreactjourney/node_modules
