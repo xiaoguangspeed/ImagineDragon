@@ -1,0 +1,36 @@
+Arguments: 
+  D:\Node\node.exe D:\NPM_Global\node_modules\yarn\bin\yarn.js add
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\MyApp\Git\cmd;D:\JDK1.8\bin;%MAVEN_HOME%\bin;D:\Go\bin;E:\Ryder\GOPATH\bin;D:\Node\;D:\JDK1.8\bin;D:\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;D:\NPM_Global;D:\Microsoft VS Code\bin;D:\Go\bin;E:\Ryder\GOPATH\bin;C:\Users\Administrator.IT-20170927MXMF\AppData\Roaming\npm
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.11.2
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Missing list of packages to add to your project.
+      at new MessageError (D:\NPM_Global\node_modules\yarn\lib\cli.js:186:110)
+      at Object.<anonymous> (D:\NPM_Global\node_modules\yarn\lib\cli.js:40587:13)
+      at Generator.next (<anonymous>)
+      at step (D:\NPM_Global\node_modules\yarn\lib\cli.js:98:30)
+      at D:\NPM_Global\node_modules\yarn\lib\cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (D:\NPM_Global\node_modules\yarn\lib\cli.js:23451:28)
+      at Object.<anonymous> (D:\NPM_Global\node_modules\yarn\lib\cli.js:95:12)
+      at Object.run (D:\NPM_Global\node_modules\yarn\lib\cli.js:40599:19)
+      at run (D:\NPM_Global\node_modules\yarn\lib\cli.js:89113:20)

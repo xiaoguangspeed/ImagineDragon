@@ -17,3 +17,5 @@
 // screenX 是只读属性，他提供了鼠标相对于屏幕坐标系的水平偏移量。
 
 // 其中offsetX, offsetY是指相对于触发事件元素的左上角的偏移。
+
+sonar-scanner.bat -Dsonar.projectKey=oec -Dsonar.organization=xiaoguangspeed-github -Dsonar.sources=. -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=53cb19bf2909e7a2e21988257d0d73c813fda7c0
