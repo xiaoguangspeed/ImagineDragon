@@ -1,0 +1,13 @@
+.navigator{
+    margin-bottom: 10px;
+}
+span{
+    padding:0 10px;
+    cursor: pointer;
+}
+span.selected{
+    background-color: darkorange;
+}
+a{
+    text-decoration: none;
+}

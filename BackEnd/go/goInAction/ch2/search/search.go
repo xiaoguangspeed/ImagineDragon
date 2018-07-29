@@ -16,17 +16,17 @@ func Run(searchTerm string){
 	waitGroup.Add(len(feeds))
 	 // 为每个数据源启动一个 goroutine 来查找结果
 		for _, feed := range feeds {
-		// 获取一个匹配器用于查找
-		matcher, exists := matchers[feed.Type]
-		if !exists {
-		matcher = matchers["default"]
-		}
+			// 获取一个匹配器用于查找
+			matcher, exists := matchers[feed.Type]
+			if !exists {
+			matcher = matchers["default"]
+			}
 
-		// 启动一个 goroutine 来执行搜索
-		go func(matcher Matcher, feed *Feed) {
-		Match(matcher, feed, searchTerm, results)
-		waitGroup.Done()
-		}(matcher, feed)
+			// 启动一个 goroutine 来执行搜索
+			go func(matcher Matcher, feed *Feed) {
+			Match(matcher, feed, searchTerm, results)
+			waitGroup.Done()
+			}(matcher, feed)
 		}
 
 		// 启动一个 goroutine 来监控是否所有的工作都做完了
