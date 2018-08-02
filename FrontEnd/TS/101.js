@@ -1,6 +1,4 @@
 var _a;
-var nameToUpperCase = function (name) { return name.toUpperCase(); };
-console.log(nameToUpperCase('joker'));
 var decLiteral = 6;
 var hexLiteral = 0xf00d;
 var binaryLiteral = 10;
@@ -25,12 +23,15 @@ var Color;
 var c = Color.red;
 console.log(c, Color);
 // any void
+//   - void类型像是与any类型相反，它表示没有任何类型。 声明一个void类型的变量没有什么大用，因为你只能为它赋予undefined和null：
 //never 类型 类型表示的是那些永不存在的值的类型。 例如， never类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型；
 // 类型断言 <>  as
-// 结构数组
+var ro = [1, 2, 3, 4];
+var someArr = ro;
+// 解构数组
 var input = [1, 2];
 var first = input[0], second = input[1];
 _a = [second, first], first = _a[0], second = _a[1];
-// 对象结构
+// 对象解构
 var o = { a: 'foo', b: 'bar', c: 'zoo' };
 var a = o.a, b = o.b;

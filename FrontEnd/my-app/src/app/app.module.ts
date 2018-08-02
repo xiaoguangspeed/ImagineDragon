@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MySitesComponent } from './my-sites/my-sites.component';
+import { PepsiComponent } from './pepsi/pepsi.component';
 
 @Pipe({ name: 'safe' })
 export class SafePipe implements PipeTransform {
@@ -18,7 +19,8 @@ export class SafePipe implements PipeTransform {
     AppComponent,
     HeaderComponent,
     MySitesComponent,
-    SafePipe
+    SafePipe,
+    PepsiComponent
   ],
   imports: [
     BrowserModule,
