@@ -1,5 +1,3 @@
-const nameToUpperCase = (name:string) => name.toUpperCase();
-console.log(nameToUpperCase('joker'))
 
 let decLiteral: number = 6;
 let hexLiteral: number = 0xf00d;
@@ -24,14 +22,15 @@ let c: Color = Color.red;
 console.log(c,Color)
 
 // any void
+//   - void类型像是与any类型相反，它表示没有任何类型。 声明一个void类型的变量没有什么大用，因为你只能为它赋予undefined和null：
 //never 类型 类型表示的是那些永不存在的值的类型。 例如， never类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型；
 
 // 类型断言 <>  as
-
-// 结构数组
+let ro :ReadonlyArray<number> = [1,2,3,4];
+// 解构数组
 let input = [1,2];
 let [first,second] = input;
 [first,second] = [second,first]
-// 对象结构
+// 对象解构
 let o = {a:'foo',b:'bar',c:'zoo'};
 let {a,b} = o;
