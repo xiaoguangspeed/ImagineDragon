@@ -31,5 +31,13 @@ const Sites = [
       Url: "http://www.allitebooks.com/",
       name: "allitebooks"
   },
+  {
+      Url: "https://github.com/jamiebuilds",
+      name: "jamiebuilds"
+  },
+  {
+      Url: "https://www.mapbox.com/",
+      name: "mapbox"
+  },
 ];
 export default Sites
