@@ -31,5 +31,9 @@ const Sites = [
       Url: "http://www.allitebooks.com/",
       name: "allitebooks"
   },
+  {
+      Url: "http://hcysun.me/vue-design/art/",
+      name: "vue-design"
+  },
 ];
 export default Sites
