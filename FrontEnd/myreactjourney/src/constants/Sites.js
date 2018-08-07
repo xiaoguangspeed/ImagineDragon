@@ -33,7 +33,13 @@ const Sites = [
   },
   {
       Url: "http://hcysun.me/vue-design/art/",
-      name: "vue-design"
+      name: "vue-design",
+      Url: "https://github.com/jamiebuilds",
+      name: "jamiebuilds"
+  },
+  {
+      Url: "https://www.mapbox.com/",
+      name: "mapbox"
   },
 ];
 export default Sites

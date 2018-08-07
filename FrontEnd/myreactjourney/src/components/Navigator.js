@@ -1,32 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
+// let selectedSite = '';
+// let select = (site) => {
+//    selectedSite = site;
+//    return;
+// }
+class Navigator extends Component {
+  constructor(props){
+    super(props);
+    // this.state = {
+    //   selectedSite:props.Sites[0]
+    // }
+  };
 
-const Navigator = props =>{
-  let selectedSite = props.Sites[0].Url;
-  const select = (url) => {
-    selectedSite = url;
-  }
-  return (
-
-    <div className="navbar navbar-light">
-      <div className="Navcontainer">
-        {props.Sites.map( site =>{
-          return (
-            <a href={site.Url} key={site.name} onClick={select(site.Url)} > {site.name}</a>
-          )
-        })}
+  render() {
+    return (
+      <div className="navbar navbar-light">
+        <div className="Navcontainer">
+          {this.props.Sites.map(site => {
+            return (
+              <a href={site.Url} key={site.name}  > {site.name}</a>
+            )
+          })}
+        </div>
       </div>
-        <iframe
-        title=""
-        width="50%"
-        height="400"
-        frameborder="0"
-        scrolling="yes"
-        marginheight="0"
-        marginwidth="0"
-        src={selectedSite} >
-        </iframe>
-    </div>
-  )
+    )
+  }
 }
+
 
 export default Navigator
