@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <Map-Box ></Map-Box>
+    <map-box></map-box>
   </div>
 </template>
 
 <script>
-import  MapBox  from './components/MapBox.vue';
+import MapBox from './components/MapBox'
 export default {
   name: 'app',
   components: {

@@ -41,5 +41,9 @@ const Sites = [
       Url: "https://www.mapbox.com/",
       name: "mapbox"
   },
+  {
+      Url: "https://blog.patricktriest.com/",
+      name: "patricktriest"
+  },
 ];
 export default Sites
