@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/service/product",
+    "pages/service/productdetail",
+    "pages/service/attendant",
+    "pages/user/addAddress",
+    "pages/user/chooseAddress",
+    "pages/user/myAddress",
+    "pages/user/orderList",
+    "pages/user/orderDetail",
+    "pages/user/index",
+    "pages/user/login",
+    "pages/user/register",
+
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "服务"
+        },
+        {
+          "pagePath": "pages/user/orderList",
+          "text": "订单"
+        },
+        {
+          "pagePath": "pages/user/index",
+          "text": "我的"
+        }
+      ]
+    },
+    "networkTimeout": {
+      "request": 10000,
+      "downloadFile": 10000
+    },
+    "debug": true
+}

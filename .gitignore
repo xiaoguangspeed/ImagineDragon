@@ -2,11 +2,13 @@ BackEnd/blockchain/go-ethereum-master
 BackEnd/blockchain/privateChain/chaindata
 BackEnd/blockchain/go-ethereum-master.zip
 BackEnd/myNodeApp/cliApp/node_modules
+BackEnd/Nodejs/LetsChat/Parrot/Parrot/node_modules
 BackEnd/myNodeApp/web3/node_modules
 BackEnd/Nodejs/Crawler/node_modules
 BackEnd/nodebb/node_modules
 FrontEnd/myreactjourney/node_modules
 FrontEnd/reLearnVue/vuePressDemo/node_modules
-FrontEnd/myAngularJourney/shark/node_modules
+FrontEnd\AngularTrip\ngDemo\node_modules
 FrontEnd/reactInit/myapp/node_modules
+FrontEnd\mixins\node_modules
 FrontEnd/OSChina/mapboxapp/node_modules
