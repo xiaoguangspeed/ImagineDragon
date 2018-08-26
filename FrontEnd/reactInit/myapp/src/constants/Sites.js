@@ -1,9 +1,11 @@
 const Sites = [
   {
+      id:"0",
       Url: "https://cn.bing.com/",
       name: "Bing"
   },
   {
+      id:"1",
       Url: "https://github.com/trending",
       name: "GitHub trending"
   },

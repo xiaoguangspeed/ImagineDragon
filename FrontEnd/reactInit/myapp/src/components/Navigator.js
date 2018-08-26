@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class Navigator extends Component {
-  constructor(props){
-    super(props);
-
-  };
 
   render() {
     return (
