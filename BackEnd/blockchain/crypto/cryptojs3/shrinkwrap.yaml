@@ -1,0 +1,13 @@
+dependencies:
+  crypto-js: 3.1.9-1
+packages:
+  /crypto-js/3.1.9-1:
+    dev: false
+    resolution:
+      integrity: sha1-/aGedh/Ad+Af+/3G6f38WeiAbNg=
+      tarball: /crypto-js/download/crypto-js-3.1.9-1.tgz
+registry: 'http://registry.npm.taobao.org/'
+shrinkwrapMinorVersion: 9
+shrinkwrapVersion: 3
+specifiers:
+  crypto-js: ^3.1.9-1
