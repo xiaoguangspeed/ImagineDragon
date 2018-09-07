@@ -8,16 +8,16 @@ function resolve (dir) {
 
 
 module.exports = {
+  mode: 'development',
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: '../src/main.js'
+    app: './src/main.js'
   },
   devtool:'inline-source-map',
   devServer:{
       contentBase:'../dist'
   },
   output: {
-    path: config.build.assetsRoot,
     filename: '[name].js',
     path:path.resolve(__dirname,'..','dist')
   },

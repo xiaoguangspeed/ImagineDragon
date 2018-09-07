@@ -2,3 +2,6 @@
 var cat = {'color':'red'};
 var animal={cat};
 console.log(animal);  //{ cat: { color: 'red' } }
+
+
+console.log( exports == this)

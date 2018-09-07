@@ -42,6 +42,10 @@ const Sites = [
       name: "jamiebuilds"
   },
   {
+      Url: "https://github.com/apache/incubator-echarts",
+      name: "echarts"
+  },
+  {
       Url: "https://www.mapbox.com/",
       name: "mapbox"
   },
