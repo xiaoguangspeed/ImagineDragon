@@ -53,5 +53,13 @@ const Sites = [
       Url: "https://blog.patricktriest.com/",
       name: "patricktriest"
   },
+  {
+      Url: "http://www.cad.zju.edu.cn/home/vagblog/",
+      name: "浙大可视化博客"
+  },
+  {
+      Url: "https://github.com/d3/d3",
+      name: "D3"
+  },
 ];
 export default Sites
