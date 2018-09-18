@@ -2,6 +2,7 @@
   document.body.addEventListener('click',function(e){
     const canvas = document.getElementById('canvas');
     console.dir(e)
+    canvas.fillRect(10,10,50);
     canvas.setAttribute('style',`position:absolute;border:1px solid orange;top:${e.clientY}px;left:${e.clientX}px`)
   })
 })()
