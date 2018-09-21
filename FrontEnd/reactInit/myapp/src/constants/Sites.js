@@ -26,10 +26,6 @@ const Sites = [
       name: "weibo"
   },
   {
-      Url: "https://ethfans.org/",
-      name: "ethfans"
-  },
-  {
       Url: "http://www.allitebooks.com/",
       name: "allitebooks"
   },
