@@ -46,10 +46,6 @@ const Sites = [
       name: "mapbox"
   },
   {
-      Url: "https://blog.patricktriest.com/",
-      name: "patricktriest"
-  },
-  {
       Url: "http://www.cad.zju.edu.cn/home/vagblog/",
       name: "浙大可视化博客"
   },
