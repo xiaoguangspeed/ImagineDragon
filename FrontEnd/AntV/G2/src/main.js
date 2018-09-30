@@ -7,10 +7,10 @@ const data = [
   ];
 const chart = new G2.Chart({
     container:'c1',
-    width:600,
-    height:300
+    // width:600,
+    // height:300
 })
-
+console.dir(chart.constructor)
 chart.source(data);
 chart.interval().position('genre*sold').color('genre')
 chart.render();

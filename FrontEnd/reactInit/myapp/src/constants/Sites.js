@@ -26,10 +26,6 @@ const Sites = [
       name: "weibo"
   },
   {
-      Url: "https://ethfans.org/",
-      name: "ethfans"
-  },
-  {
       Url: "http://www.allitebooks.com/",
       name: "allitebooks"
   },
@@ -48,10 +44,6 @@ const Sites = [
   {
       Url: "https://www.mapbox.com/",
       name: "mapbox"
-  },
-  {
-      Url: "https://blog.patricktriest.com/",
-      name: "patricktriest"
   },
   {
       Url: "http://www.cad.zju.edu.cn/home/vagblog/",

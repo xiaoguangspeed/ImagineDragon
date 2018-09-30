@@ -3,5 +3,7 @@ var cat = {'color':'red'};
 var animal={cat};
 console.log(animal);  //{ cat: { color: 'red' } }
 
+let { color } = cat;
+console.log(color)  //'red'
 
 console.log( exports == this)

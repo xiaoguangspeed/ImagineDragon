@@ -18,3 +18,26 @@
 // screenX 是只读属性，他提供了鼠标相对于屏幕坐标系的水平偏移量。
 
 // 其中offsetX, offsetY是指相对于触发事件元素的左上角的偏移。
+
+
+var dOffsetWidth = divObj.offsetWidth;//返回元素的宽度（包括元素宽度、内边距和边框，不包括外边距）
+var $dOffsetWidth = $(divObj).outerWidth(false);//参数为true，包括外边距
+
+var dOffsetHeight = divObj.offsetHeight;//返回元素的高度（包括元素高度、内边距和边框，不包括外边距）
+var $dOffsetHeight = $(divObj).outerHeight(false);//参数为true，包括外边距
+
+
+var dClientWidth = divObj.clientWidth;//返回元素的宽度（包括元素宽度、内边距，不包括边框和外边距）
+var $dClientWidth = $(divObj).innerWidth();
+
+var dClientHeight = divObj.clientHeight;//返回元素的高度（包括元素高度、内边距，不包括边框和外边距）
+var $dClientHeight = $(divObj).innerHeight();
+
+var dWidth = divObj.style.width;//返回元素的宽度（包括元素宽度，不包括内边距、边框和外边距）
+var $dWidth = $(divObj).width();//width(val)设置宽
+
+var dHeight = divObj.style.height;//返回元素的高度（包括元素高度，不包括内边距、边框和外边距）
+var $dHeight = $(divObj).height();//height(val)设置高
+
+var dscrollWidth = divObj.scrollWidth;//返回元素的宽度（包括元素宽度、内边距和溢出尺寸，不包括边框和外边距），无溢出的情况，与clientWidth相同
+var dscrollHeight = divObj.scrollHeight;//返回元素的高度（包括元素高度、内边距和溢出尺寸，不包括边框和外边距），无溢出的情况，与clientHeight相同
