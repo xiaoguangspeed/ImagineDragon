@@ -1,40 +1,28 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/service/product",
-    "pages/service/productdetail",
-    "pages/service/attendant",
-    "pages/user/addAddress",
-    "pages/user/chooseAddress",
-    "pages/user/myAddress",
-    "pages/user/orderList",
-    "pages/user/orderDetail",
-    "pages/user/index",
-    "pages/user/login",
-    "pages/user/register",
-
+    "pages/Util/index",
+    "pages/Util/Test/mbti/profession",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "伯克心理",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
   },
   "tabBar": {
       "list": [
         {
           "pagePath": "pages/index/index",
-          "text": "服务"
+          "text": "首页"
         },
         {
-          "pagePath": "pages/user/orderList",
-          "text": "订单"
-        },
-        {
-          "pagePath": "pages/user/index",
-          "text": "我的"
+          "pagePath": "pages/Util/index",
+          "text": "测评"
         }
+        
       ]
     },
     "networkTimeout": {

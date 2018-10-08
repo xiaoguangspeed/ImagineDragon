@@ -1,0 +1,4 @@
+<!--pages/Util/index.wxml-->
+<text wx:for="{{testList}}" class='testitem'>
+  {{item.name}}
+</text>
