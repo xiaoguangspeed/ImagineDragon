@@ -6,10 +6,18 @@ Page({
    */
   data: {
     "testList": [
-      { "name": "Mbti 职业性格测试" }
+      { "name": "Mbti 职业性格测试",
+        "url":"./Test/mbti/profession"
+      }
     ]
   },
-
+  navTo: function(event){
+    var index = event.currentTarget.dataset.index;
+    console.log(index)
+    wx.navigateTo({
+      url: this.data.testList[index].url,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

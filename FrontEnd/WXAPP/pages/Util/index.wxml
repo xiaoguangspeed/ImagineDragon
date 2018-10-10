@@ -1,4 +1,4 @@
 <!--pages/Util/index.wxml-->
-<text wx:for="{{testList}}" class='testitem'>
+<text wx:for="{{testList}}" wx:key="name" data-index='{{index}}' class='testitem' bindtap='navTo'>
   {{item.name}}
 </text>
