@@ -53,5 +53,9 @@ const Sites = [
       Url: "https://github.com/d3/d3",
       name: "D3"
   },
+  {
+      Url: "http://www.nginx.cn/doc/",
+      name: "Nginx"
+  },
 ];
 export default Sites
