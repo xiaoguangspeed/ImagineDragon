@@ -61,6 +61,10 @@
       Url: "https://redux.js.org/",
       name: "redux"
   },
+  {
+    Url: "http://www.nginx.cn/doc/",
+    name: "Nginx"
+  }
 ];
  const DESIGN = [
     {

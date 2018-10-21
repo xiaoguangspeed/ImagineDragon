@@ -3,7 +3,7 @@ const data = [
     { genre: 'Strategy', sold: 115 },
     { genre: 'Action', sold: 120 },
     { genre: 'Shooter', sold: 350 },
-    { genre: 'Other', sold: 150 }
+    { genre: 'Other', sold: 150 },
   ];
 const chart = new G2.Chart({
     container:'c1',
