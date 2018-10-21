@@ -1,0 +1,10 @@
+[
+    {
+        "name":"bitcoin",
+        "coin":"BTC"
+    },
+    {
+        "name":"zcash",
+        "coin":"ZEC"
+    }
+]

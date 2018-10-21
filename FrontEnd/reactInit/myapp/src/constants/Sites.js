@@ -1,13 +1,12 @@
-const Sites = [
-  {
-      id:"0",
+ const FED = [
+    {
       Url: "https://cn.bing.com/",
-      name: "Bing"
+      name: "Bing",
+      cate:"前端"
   },
   {
-      id:"1",
       Url: "https://github.com/trending",
-      name: "GitHub trending"
+      name: "GitHub_trending"
   },
   {
       Url: "https://developer.mozilla.org/zh-CN/",
@@ -24,10 +23,6 @@ const Sites = [
   {
       Url: "https://m.weibo.cn/",
       name: "weibo"
-  },
-  {
-      Url: "http://www.allitebooks.com/",
-      name: "allitebooks"
   },
   {
       Url: "http://hcysun.me/vue-design/art/",
@@ -53,5 +48,31 @@ const Sites = [
       Url: "https://github.com/d3/d3",
       name: "D3"
   },
+  {
+      Url: "https://blockexplorer.com/",
+      name: "blockexplorer"
+  },
+
+  {
+      Url: "https://react-redux.js.org/docs/introduction/quick-start",
+      name: "react-redux"
+  },
+  {
+      Url: "https://redux.js.org/",
+      name: "redux"
+  },
 ];
-export default Sites
+ const DESIGN = [
+    {
+        Url: "https://dribbble.com/",
+        name: "dribbble"
+    },
+]
+ const OTHERS = [
+    {
+        Url:"https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/",
+        name:"REACT-BIND"
+    },
+]
+
+export const Sites = [FED,DESIGN,OTHERS]

@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  tapbtn:function(){
+      console.log('tabs');
+      wx.showToast({
+        title: 'ok',
+      })
   }
 })

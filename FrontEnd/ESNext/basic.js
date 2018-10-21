@@ -7,3 +7,5 @@ let { color } = cat;
 console.log(color)  //'red'
 
 console.log( exports == this)
+
+let connect = myConnect(...args)(1,23)

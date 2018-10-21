@@ -1,5 +1,9 @@
 <!--pages/Util/Test/mbti/profession.wxml-->
 <view>
-  <text class='tip'>性格没有好与坏，测试的目的是反映最真实的自己，而不是别人所期待的你。请最大程度放松下来，选择当您面临下述这些情况时不由自主、自然和不假思索的决定或倾向。</text>
+  <view class='tip'>性格没有好与坏，测试的目的是反映最真实的自己，而不是别人所期待的你。请最大程度放松下来，选择当您面临下述这些情况时不由自主、自然和不假思索的决定或倾向。</view>
   <button type='primary' size='mini'>开始测试</button>
+  <view class='viewwrap'>
+  <input placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+  <span class='chooseword' bindtap="tapbtn">选词</span>
+  </view>
 </view>
