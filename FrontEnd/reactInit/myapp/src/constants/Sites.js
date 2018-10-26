@@ -66,6 +66,12 @@
     name: "Nginx"
   }
 ];
+ const ALIANT = [
+    {
+        Url: "https://chitu.alipay.com/",
+        name: "赤兔"
+    },
+ ]
  const DESIGN = [
     {
         Url: "https://dribbble.com/",
