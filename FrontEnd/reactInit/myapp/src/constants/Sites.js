@@ -72,6 +72,20 @@
         name: "dribbble"
     },
 ]
+ const BED = [
+    {
+        Url: "https://account.geekbang.org/dashboard/buy",
+        name: "geekbang"
+    },
+    {
+        Url: "https://golang.google.cn/",
+        name: "golang"
+    },
+    {
+        Url: "https://echo.labstack.com/guide",
+        name: "echo"
+    },
+]
  const OTHERS = [
     {
         Url:"https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/",
