@@ -2,26 +2,17 @@ package main
 
 import (
 	"net/http"
-	"github.com/labstack/echo"
+	"github.com/gin-gonic/gin"
 )
 
-func getUser(c echo.Context) error{
-	id := c.Param("id")
-	return c.String(http.StatusOK,id)
-}
-
 func main(){
-	e := echo.New()
-	e.GET("/",func(c echo.Context) error{
-		return c.String(http.StatusOK,"hello world")
+	e := gin.Default()
+	e.GET("/",func(c *gin.Context) {
+		c.JSON(http.StatusOK,gin.H{
+			"message":"pong",
+		})
 	})
-	// e.POST("/users",saveUser)
-	e.GET("/users/:id",getUser)
-	// e.PUT("/users/:id",updateUser)
-	// e.DELETE("/users/:id",deleteUser)
-	e.Logger.Fatal(e.Start(":1323"))
 
-
-
+	e.Run()
 }
 

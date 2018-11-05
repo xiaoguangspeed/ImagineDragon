@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import {connect } from "react-redux";
 import styled from "styled-components";
-// import CryptoCurrency  from './components/CryptoCurrency'
+import Rect  from './components/Rect'
 // import './App.css'
 
 const OverLay = styled.div`
@@ -33,7 +33,7 @@ class App extends Component {
     return (
      <Router>
       <div className="App">
-
+        <Rect></Rect>
         
       </div>
      </Router>
