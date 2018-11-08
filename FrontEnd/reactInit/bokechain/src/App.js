@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import {connect } from "react-redux";
 import styled from "styled-components";
 import Rect  from './components/Rect'
+import LazyImg  from './components/LazyImg'
 // import './App.css'
 
 const OverLay = styled.div`
@@ -34,7 +35,7 @@ class App extends Component {
      <Router>
       <div className="App">
         <Rect></Rect>
-        
+        <LazyImg></LazyImg>
       </div>
      </Router>
     );

@@ -62,6 +62,10 @@
       name: "redux"
   },
   {
+    Url: "https://storybook.js.org/",
+    name: "storybook"
+  },
+  {
     Url: "http://www.nginx.cn/doc/",
     name: "Nginx"
   },
@@ -102,10 +106,20 @@
         name:"tryblockchain"
     },
 ]
+ const art_Ent = [
+    {
+        Url:"https://www.netflix.com/cn/",
+        name:"netflix"
+    },
+]
  const OTHERS = [
     {
         Url:"https://www.smashingmagazine.com/2014/01/understanding-javascript-function-prototype-bind/",
         name:"REACT-BIND"
+    },
+    {
+        Url:"https://www.v2ex.com/",
+        name:"v2ex"
     },
 ]
 
