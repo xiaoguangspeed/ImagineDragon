@@ -17,3 +17,9 @@ console.log( exports == this)
 // the value of `v` below will be `undefined`
 Array.from({length: 5}, (v, i) => i);
 // [0, 1, 2, 3, 4]
+
+function Teacher(first, last, age, gender, interests, subject) {
+    Person.call(this, first, last, age, gender, interests);
+  
+    this.subject = subject;
+  }
