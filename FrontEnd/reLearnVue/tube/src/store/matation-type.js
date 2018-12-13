@@ -1,0 +1,1 @@
+export const CHANGE_APPID = "CHANGE_APPID";

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            width:100%;
+        }
+        #canvas{
+            display: block;
+            border:1px solid green;
+            background-color: black;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas" width="500" height="300">
+
+        </canvas>
+        <p>draw a line</p>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var canvas = document.getElementById('canvas')
+            var context = canvas.getContext('2d')
+            context.lineWidth = 10
+            context.strokeStyle = 'yellow'
+            // context.lineCap = 'round'
+            context.moveTo(245,30)
+            context.lineTo(245,230) 
+            context.stroke()
+            context.moveTo(195,70)
+            context.lineTo(295,70) 
+            context.stroke()
+
+            // 从canvas对象中导出data：url
+            var Url = canvas.toDataURL();
+            var img = document.createElement('img');
+            img.src = Url;
+            document.body.appendChild(img);
+
+        }
+
+        
+    
+    
+    
+    </script>
+</body>
+</html>

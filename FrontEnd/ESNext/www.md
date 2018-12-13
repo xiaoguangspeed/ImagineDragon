@@ -1,1 +1,0 @@
-### FID < 100ms   first input delay 
