@@ -1,0 +1,2 @@
+getServeStuff = ajaxCall
+ajaxCall(callback)
