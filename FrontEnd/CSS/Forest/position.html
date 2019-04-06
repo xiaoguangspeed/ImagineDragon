@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+        }
+        .demo {
+            /*问题：当margin-top、padding-top的值是百分比时，分别是如何计算的？ 
+            相对最近父级块级元素的width，相对最近父级块级元素的width
+            css设置绝对定位后 top,bottom,设置百分比定位是按父元素的高度来计算的，
+            同样left,right,设置百分比定位是按父元素的宽度度来计算的
+             */
+            margin-top: 50%;
+            padding-top:20%;
+            background: red;
+        }
+        .child {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="demo">
+            <div class="child"></div>
+        </div>
+    </div>
+</body>
+</html>

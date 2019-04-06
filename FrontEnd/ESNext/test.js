@@ -1,6 +1,4 @@
-;(function(){
-    console.log(1)
-})();
-(function(){
-    console.log(2)
-})()
+let button = theme => ({
+    root: theme.color
+})
+console.log(button({color:'red'}))

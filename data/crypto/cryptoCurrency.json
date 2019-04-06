@@ -6,5 +6,9 @@
     {
         "name":"zcash",
         "coin":"ZEC"
+    },
+    {
+        "name":"RAVEN COIN",
+        "DES":"方便用户创建和管理资产。"
     }
 ]
