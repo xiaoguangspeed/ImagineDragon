@@ -28,3 +28,5 @@ declare enum Enum {
 // 类型推论
 // 联合数组类型
 let au : ( number | null)[] = [1, null]
+
+// 
