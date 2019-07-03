@@ -1,6 +1,0 @@
-/* pages/Util/index.wxss */
-.testitem{
-  display: inline-block;
-  width:100%;
-  padding-left:2rem;
-}

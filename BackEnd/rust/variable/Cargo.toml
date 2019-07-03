@@ -1,7 +1,0 @@
-[package]
-name = "variable"
-version = "0.1.0"
-authors = ["xiaoguangspeed <xiaoguangspeed@126.com>"]
-edition = "2018"
-
-[dependencies]

@@ -1,2 +1,0 @@
-getServeStuff = ajaxCall
-ajaxCall(callback)
