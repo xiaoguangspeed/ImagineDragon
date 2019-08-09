@@ -10,7 +10,7 @@
 
 <body onload="main()">
   <div>
-    <h1>learn webgl</h1>
+    <!-- <h1>learn webgl</h1> -->
     <canvas id="gl" width="600" height="300">
 
     </canvas>
@@ -37,9 +37,11 @@
       gl.clear(gl.COLOR_BUFFER_BIT)
       let program = gl.createProgram()
       let vertexShaderSource = `
+        attribute vec4 a_position;
+        attribute float a_pointSize;
         void main() {
-          gl_Position = vec4(0.0,0.0,0.0,1.0);
-          gl_PointSize = 100.0;
+          gl_Position = a_position;
+          gl_PointSize = a_pointSize;
         }
       `
       let fragShaderSource = `
@@ -47,6 +49,12 @@
           gl_FragColor = vec4(1.0,0.0,0.0,1.0);
         }
       `
+      
+      let a_position = gl.getAttribLocation(program, 'a_position');
+      let a_pointSize = gl.getAttribLocation(program, 'a_pointSize');
+
+      gl.vertexAttrib3f(a_position,0.0,0.0,0.0)
+      gl.vertexAttrib1f(a_pointSize,5.0)
       let vertexShader = createShader(gl,vertexShaderSource,gl.VERTEX_SHADER)
       let fragShader = createShader(gl,fragShaderSource,gl.FRAGMENT_SHADER)
       gl.attachShader(program, vertexShader)
