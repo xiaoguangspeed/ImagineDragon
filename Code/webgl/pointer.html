@@ -49,17 +49,17 @@
           gl_FragColor = vec4(1.0,0.0,0.0,1.0);
         }
       `
-      
-      let a_position = gl.getAttribLocation(program, 'a_position');
-      let a_pointSize = gl.getAttribLocation(program, 'a_pointSize');
 
-      gl.vertexAttrib3f(a_position,0.0,0.0,0.0)
-      gl.vertexAttrib1f(a_pointSize,5.0)
       let vertexShader = createShader(gl,vertexShaderSource,gl.VERTEX_SHADER)
       let fragShader = createShader(gl,fragShaderSource,gl.FRAGMENT_SHADER)
       gl.attachShader(program, vertexShader)
       gl.attachShader(program, fragShader)
       gl.linkProgram(program)
+      let a_position = gl.getAttribLocation(program, 'a_position');
+      let a_pointSize = gl.getAttribLocation(program, 'a_pointSize');
+      gl.vertexAttrib3f(a_position,0.0,0.0,0.0)
+      gl.vertexAttrib1f(a_pointSize,5.0)
+
       if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
         var info = gl.getProgramInfoLog(program);
         throw 'WebGL program 不能编译. \n\n' + info;
