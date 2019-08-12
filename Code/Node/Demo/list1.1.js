@@ -11,5 +11,14 @@ function CountStream(matchText, options){
 }
 
 CountStream.prototype._write = function(chunk, encoding, cb){
-  
+  var matches = chunk.toString().match(this.matcher)
+  if(matches){
+    console.log('match', matches)
+    this.count += matches.length
+  }
+  cb()
+}
+
+CountStream.prototype.end = function(){
+  this.emit('total', this.count)
 }
