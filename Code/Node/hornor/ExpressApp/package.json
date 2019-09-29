@@ -14,7 +14,9 @@
     "semver": "^6.3.0"
   },
   "dependencies": {
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "minimist": "^1.2.0",
+    "mongoose": "^5.7.0"
   },
   "engines": {
     "node": ">=8.9.0",
