@@ -1,0 +1,1 @@
+// import React {suspence, lazy} from react;

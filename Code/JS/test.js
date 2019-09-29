@@ -1,5 +1,12 @@
-let assert = require('assert')
+let net = require('net')
+const server = net.createServer((socket) => {
+  socket.end('再见\n');
+}).on('error', (err) => {
+  // 处理错误
+  throw err;
+});
 
-let fn = 123
-
-assert('function' == typeof fn, 'function required')
+// 获取任意未使用的端口。
+server.listen(() => {
+  console.log('打开服务器', server.address());
+});
