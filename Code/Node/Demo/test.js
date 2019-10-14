@@ -1,19 +1,13 @@
-const { Duplex } = require("stream");
+const readline = require('readline');
 
-const inoutStream = new Duplex({
-  write(chunk, encoding, callback) {
-    console.log(chunk.toString());
-    callback();
-  },
-
-  read(size) {
-    this.push(String.fromCharCode(this.currentCharCode++));
-    if (this.currentCharCode > 90) {
-      this.push(null);
-    }
-  }
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 });
 
-inoutStream.currentCharCode = 65;
+rl.question('你如何看待 Node.js 中文网？', (answer) => {
+  // TODO：将答案记录在数据库中。
+  console.log(`感谢您的宝贵意见：${answer}`);
 
-process.stdin.pipe(inoutStream).pipe(process.stdout);
+  rl.close();
+});
