@@ -1,5 +1,8 @@
-let assert = require('assert')
+const arr = [1,2,3,4,5]
 
-let fn = 123
-
-assert('function' == typeof fn, 'function required')
+arr.forEach((item, index) => {
+  if(item === 2) {
+    return
+  }
+  console.log(item)
+})
