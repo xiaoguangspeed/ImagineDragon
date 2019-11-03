@@ -1,4 +1,0 @@
-bitcoin
-litecoin
-ethereum
-patiry
