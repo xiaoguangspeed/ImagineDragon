@@ -2,9 +2,12 @@
 <view class="container">
   <image src="../../images/toohard.jpg"></image>
   <text class="desc">测测你的难度系数</text>
-  <button type="primary" size="{{primarySize}}" bindtap="primary"> 开始测试 </button>
-<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">去授权</button>
-
+  <view  wx:if="{{!userInfo.nickName}}">
+    <text>该应用需要获取你的用户信息，请点击下方按钮同意</text>
+    <button type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">去授权</button>
+  
+  </view>
+  <button wx:if="{{userInfo.nickName}}" type="primary" bindtap="beginTest"> 开始测试 </button>
   <!-- 用户 openid -->
   <!-- <view class="userinfo">
     <button 

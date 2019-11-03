@@ -37,7 +37,11 @@ Page({
       }
     })
   },
-
+    beginTest: function() {
+      wx.redirectTo({
+        url: '/pages/questions',
+      })
+    },
   onGotUserInfo: function(e) {
     if (!this.data.logged && e.detail.userInfo) {
       this.setData({
