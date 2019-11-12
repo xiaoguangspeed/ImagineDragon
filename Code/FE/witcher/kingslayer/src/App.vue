@@ -7,7 +7,18 @@
     <router-view />
   </div>
 </template>
-
+<script>
+  var start = Date.now()
+  document.addEventListener('DOMContentLoaded', function() {
+    // 埋点
+    console.log('dom complete',Date.now() - start)
+  })
+  window.addEventListener('load',function() {
+    console.log('load',Date.now() - start)
+  })
+export default {
+}
+</script>
 <style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;

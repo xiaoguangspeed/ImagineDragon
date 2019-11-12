@@ -1,0 +1,18 @@
+$width: 40px;
+.fl{
+  float: left;
+}
+//一处代码，多处公用
+@mixin ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+// 自定义函数
+@function grid-width($w) {
+  @return $width + $w
+}
+// 继承
+.box {
+  @extend .fl;
+}
