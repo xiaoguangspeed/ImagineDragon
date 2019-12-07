@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://blog.logrocket.com/having-fun-with-es6-proxies/ -->
+<html lang="en-US" class="jetpack-lazy-images-js-enabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="pingback" href="https://blog.logrocket.com/xmlrpc.php">
+<title>Having fun with ES6 proxies - LogRocket Blog</title>
+<!-- Jetpack Site Verification Tags -->
+
+<!-- This site is optimized with the Yoast SEO plugin v12.5.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Although JavaScript proxies aren&#39;t particularly useful on a day-to-day basis, they are sure to come in handy at some point in your future.">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://blog.logrocket.com/having-fun-with-es6-proxies/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Having fun with ES6 proxies - LogRocket Blog">
+<meta property="og:description" content="Although JavaScript proxies aren&#39;t particularly useful on a day-to-day basis, they are sure to come in handy at some point in your future.">
+<meta property="og:url" content="https://blog.logrocket.com/having-fun-with-es6-proxies/">
+<meta property="og:site_name" content="LogRocket Blog">
+<meta property="article:tag" content="es6">
+<meta property="article:section" content="Uncategorized">
+<meta property="article:published_time" content="2019-11-13T09:00:35-05:00">
+<meta property="article:modified_time" content="2019-11-13T09:03:50-05:00">
+<meta property="og:updated_time" content="2019-11-13T09:03:50-05:00">
+<meta property="og:image" content="https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?fit=730%2C490&amp;ssl=1">
+<meta property="og:image:secure_url" content="https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?fit=730%2C490&amp;ssl=1">
+<meta property="og:image:width" content="730">
+<meta property="og:image:height" content="490">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Although JavaScript proxies aren&#39;t particularly useful on a day-to-day basis, they are sure to come in handy at some point in your future.">
+<meta name="twitter:title" content="Having fun with ES6 proxies - LogRocket Blog">
+<meta name="twitter:image" content="https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?fit=730%2C490&amp;ssl=1">
+<script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/munchkin.js.下载"></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/wootric-sdk.js.下载"></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/munchkin.js(1).下载"></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/zcgg0wlq"></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/f.txt"></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/heap-2744321076.js.下载"></script><script src="./Having fun with ES6 proxies - LogRocket Blog_files/111605826216653" async=""></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/fbevents.js.下载"></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/insight.min.js.下载"></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/uwt.js.下载"></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/insight.min.js.下载"></script><script async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/uwt.js.下载"></script><script type="text/javascript" async="" src="./Having fun with ES6 proxies - LogRocket Blog_files/a.js.下载"></script><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.logrocket.com/#website","url":"https://blog.logrocket.com/","name":"LogRocket Blog","potentialAction":{"@type":"SearchAction","target":"https://blog.logrocket.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://blog.logrocket.com/having-fun-with-es6-proxies/#primaryimage","url":"https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?fit=730%2C490&ssl=1","width":730,"height":490,"caption":"Having Fun With ES6 Proxies"},{"@type":"WebPage","@id":"https://blog.logrocket.com/having-fun-with-es6-proxies/#webpage","url":"https://blog.logrocket.com/having-fun-with-es6-proxies/","inLanguage":"en-US","name":"Having fun with ES6 proxies - LogRocket Blog","isPartOf":{"@id":"https://blog.logrocket.com/#website"},"primaryImageOfPage":{"@id":"https://blog.logrocket.com/having-fun-with-es6-proxies/#primaryimage"},"datePublished":"2019-11-13T09:00:35-05:00","dateModified":"2019-11-13T09:03:50-05:00","author":{"@id":"https://blog.logrocket.com/#/schema/person/35200aeb6521b2588dd3227b5488f186"},"description":"Although JavaScript proxies aren't particularly useful on a day-to-day basis, they are sure to come in handy at some point in your future."},{"@type":["Person"],"@id":"https://blog.logrocket.com/#/schema/person/35200aeb6521b2588dd3227b5488f186","name":"Maciej Cie\u015blar","image":{"@type":"ImageObject","@id":"https://blog.logrocket.com/#authorlogo","url":"https://secure.gravatar.com/avatar/d88c1619853a3f5e033667dc3c355cc9?s=96&d=mm&r=g","caption":"Maciej Cie\u015blar"},"description":"A JavaScript developer and a blogger @ https://www.mcieslar.com/","sameAs":[]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="LogRocket Blog » Feed" href="https://blog.logrocket.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="LogRocket Blog » Comments Feed" href="https://blog.logrocket.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="LogRocket Blog » Having fun with ES6 proxies Comments Feed" href="https://blog.logrocket.com/having-fun-with-es6-proxies/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blog.logrocket.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Having fun with ES6 proxies - LogRocket Blog_files/wp-emoji-release.min.js(1).下载" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-theme-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/theme.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="crp-public-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/public.css" type="text/css" media="all">
+<link rel="stylesheet" id="github-embed-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/github-embed.css" type="text/css" media="all">
+<link rel="stylesheet" id="bootstrap4-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="mediumish-style-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="social-logos-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/social-logos.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/jquery-3.4.1.min.js.下载"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ai_front = {"wp_ai":"5.3+2.5.9","insertion_before":"BEFORE","insertion_after":"AFTER","insertion_prepend":"PREPEND CONTENT","insertion_append":"APPEND CONTENT","insertion_replace_content":"REPLACE CONTENT","insertion_replace_element":"REPLACE ELEMENT","cancel":"Cancel","use":"Use","add":"Add","parent":"Parent","cancel_element_selection":"Cancel element selection","select_parent_element":"Select parent element","css_selector":"CSS selector","use_current_selector":"Use current selector","element":"ELEMENT","path":"PATH","selector":"SELECTOR","visible":"VISIBLE","hidden":"HIDDEN"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/ai-jquery.js.下载"></script>
+<script type="text/javascript">
+function ai_insert(a,e,h){var f=-1!=e.indexOf(":eq")?jQuery(e):document.querySelectorAll(e);Array.prototype.forEach.call(f,function(b,f){selector_string=b.hasAttribute("id")?"#"+b.getAttribute("id"):b.hasAttribute("class")?"."+b.getAttribute("class").replace(RegExp(" ","g"),"."):"";var d=document.createElement("div");d.innerHTML=h;var c=d.getElementsByClassName("ai-selector-counter")[0];null!=c&&(c.innerText=f+1);c=d.getElementsByClassName("ai-debug-name ai-main")[0];if(null!=c){var g="";"before"==
+a?g=ai_front.insertion_before:"after"==a?g=ai_front.insertion_after:"prepend"==a?g=ai_front.insertion_prepend:"append"==a?g=ai_front.insertion_append:"replace-content"==a?g=ai_front.insertion_replace_content:"replace-element"==a&&(g=ai_front.insertion_replace_element);c.innerText=g+" "+e+" ("+b.tagName.toLowerCase()+selector_string+")"}c=document.createRange().createContextualFragment(d.innerHTML);"before"==a?b.parentNode.insertBefore(c,b):"after"==a?b.parentNode.insertBefore(c,b.nextSibling):"prepend"==
+a?b.insertBefore(c,b.firstChild):"append"==a?b.insertBefore(c,null):"replace-content"==a?b.innerHTML=d.innerHTML:"replace-element"==a&&(b.parentNode.insertBefore(c,b),b.parentNode.removeChild(b))})}
+function ai_insert_code(a){function e(a,b){return null==a?!1:a.classList?a.classList.contains(b):-1<(" "+a.className+" ").indexOf(" "+b+" ")}function h(a,b){null!=a&&(a.classList?a.classList.add(b):a.className+=" "+b)}function f(a,b){null!=a&&(a.classList?a.classList.remove(b):a.className=a.className.replace(new RegExp("(^|\\b)"+b.split(" ").join("|")+"(\\b|$)","gi")," "))}var b=e(a,"no-visibility-check")?!0:!!(a.offsetWidth||a.offsetHeight||a.getClientRects().length);a.getAttribute("data-block");
+if(b){b=a.getAttribute("data-code");var k=a.getAttribute("data-insertion"),d=a.getAttribute("data-selector");null!=b&&(null!=k&&null!=d?document.querySelectorAll(d).length&&(ai_insert(k,d,b64d(b)),f(a,"ai-viewports")):(b=document.createRange().createContextualFragment(b64d(b)),a.parentNode.insertBefore(b,a.nextSibling),f(a,"ai-viewports")));a=a.getElementsByClassName("ai-check-block");"undefined"!=typeof a[0]&&a[0].parentNode.removeChild(a[0])}else b=a.previousElementSibling,e(b,"ai-debug-bar")&&
+e(b,"ai-debug-script")&&(f(b,"ai-debug-script"),h(b,"ai-debug-viewport-invisible")),f(a,"ai-viewports")}function b64e(a){return btoa(encodeURIComponent(a).replace(/%([0-9A-F]{2})/g,function(a,h){return String.fromCharCode("0x"+h)}))}function b64d(a){return decodeURIComponent(atob(a).split("").map(function(a){return"%"+("00"+a.charCodeAt(0).toString(16)).slice(-2)}).join(""))};
+</script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/jquery-migrate-3.0.0.min.js.下载"></script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/highlight.min.js.下载"></script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/javascript.min.js.下载"></script>
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/postmessage.min.js.下载"></script>
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/jquery.jetpack-resize.min.js.下载"></script>
+<link rel="https://api.w.org/" href="https://blog.logrocket.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.logrocket.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blog.logrocket.com/wp-includes/wlwmanifest.xml"> 
+
+<link rel="shortlink" href="https://wp.me/paUW9B-2sR">
+<link rel="alternate" type="application/json+oembed" href="https://blog.logrocket.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.logrocket.com%2Fhaving-fun-with-es6-proxies%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://blog.logrocket.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.logrocket.com%2Fhaving-fun-with-es6-proxies%2F&amp;format=xml">
+<script>
+if (typeof jQuery == 'undefined') {
+var script = document.createElement("SCRIPT");
+script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
+script.type = 'text/javascript';
+script.onload = function() {
+var $ = window.jQuery;
+// LogRocket.captureMessage('jQuery failed to load and triggered catch');
+};
+document.getElementsByTagName("head")[0].appendChild(script);
+}</script>
+<meta name="theme-color" content="#764abc">
+<link rel="stylesheet" href="./Having fun with ES6 proxies - LogRocket Blog_files/tomorrow.min.css" media="all" onload="if(media!=&#39;all&#39;)media=&#39;all&#39;">
+
+<script>
+    window.Raven && window.Raven.config('https://98e0ea7c6f2e492d94439ad5aaea48dd@e.logrocket.com/4').install()
+    </script>
+    <script type="text/javascript">
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                if (decodeURIComponent(pair[0]) == variable) {
+                    return decodeURIComponent(pair[1]);
+                }
+            }
+        }
+        var LOCAL = false;
+        function transformURL(
+            baseURL,
+            rootDomain,
+            path
+        ) {
+            if (LOCAL) {
+                return baseURL
+                    .replace(rootDomain, 'localhost:8080' + path)
+                    .replace('https://', 'http://');
+            } else {
+                return baseURL.replace(rootDomain, 'log.logicanalytics.io' + path);
+            }
+        }
+        function setWithDescriptor(descriptor, arg) {
+            var transformedURL = arg;
+            if (transformedURL.indexOf('cdn.heapanalytics.com') !== -1) {
+              return descriptor.set.call(this, transformURL(transformedURL, 'cdn.heapanalytics.com', ''))
+            }
+            if (transformedURL.indexOf('marketo.net') !== -1) {
+              return descriptor.set.call(this, transformURL(transformedURL, 'munchkin.marketo.net', '/munchkin'))
+            }
+            if (transformedURL.indexOf('api.segment.io') !== -1) {
+              return descriptor.set.call(this, transformURL(transformedURL, 'api.segment.io', '/seg-api'))
+            }
+            if (transformedURL.indexOf('heapanalytics.com') !== -1) {
+              return descriptor.set.call(this, transformURL(transformedURL, 'heapanalytics.com', '/heap'))
+            }
+            if (transformedURL.indexOf('dev.visualwebsiteoptimizer.com') !== -1) {
+              return descriptor.set.call(this, transformURL(transformedURL, 'dev.visualwebsiteoptimizer.com', '/vwo'))
+            }
+            return descriptor.set.call(this, arg);
+        }
+        /* HEAP */
+        const scriptDescriptor = Object.getOwnPropertyDescriptor(HTMLScriptElement.prototype, 'src');
+        Object.defineProperty(HTMLScriptElement.prototype, 'src', {
+          set: function set(arg) {
+            return setWithDescriptor.call(this, scriptDescriptor, arg);
+          },
+          get: function get() {
+            return scriptDescriptor.get.call(this);
+          },
+        });
+        const imageDescriptor = Object.getOwnPropertyDescriptor(Image.prototype, 'src');
+        if (imageDescriptor) {
+            Object.defineProperty(Image.prototype, 'src', {
+              set: function set(arg) {
+                return setWithDescriptor.call(this, imageDescriptor, arg);
+              },
+              get: function get() {
+                return imageDescriptor.get.call(this);
+              },
+            });
+        }
+      /* Segment */
+      var _XHR = XMLHttpRequest;
+      // eslint-disable-next-line no-native-reassign
+      XMLHttpRequest = function XMLHttpRequest(mozAnon, mozSystem) {
+        var xhrObject = new _XHR(mozAnon, mozSystem);
+        var origOpen = xhrObject.open.bind(xhrObject);
+        xhrObject.open = function open(method, url) {
+            if (url.indexOf('api.segment.io') !== -1) {
+                origOpen(method, url.replace('api.segment.io', 'log.logicanalytics.io'));
+                return;
+            }
+            if (url.indexOf('740-LKM-263.mktoresp.com') !== -1) {
+                var url2 = url
+                    .replace('740-LKM-263.mktoresp.com', 'log.logicanalytics.io/mkto')
+                    .replace(/visitWebPage/g, 'GMdE84QYc83vZT7')
+                    .replace(/clickLink/g, '746qbsNH3kGcEr4')
+                    .replace(/associateLead/g, 'CUaGm438zqN32Qi');
+                origOpen(method, url2);
+                return;
+            }
+            origOpen(method, url);
+        };
+        return xhrObject;
+      };
+      // this allows "instanceof XMLHttpRequest" to work
+      XMLHttpRequest.prototype = _XHR.prototype;
+      // Persist the static variables.
+      ['UNSENT', 'OPENED', 'HEADERS_RECEIVED', 'LOADING', 'DONE'].forEach(function (variable) {
+        XMLHttpRequest[variable] = _XHR[variable];
+      });
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"log.logicanalytics.io/a.js/v1/"+t+"/a.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+    analytics.load("hn3yvJCms37nkkjrwDQ08PuKJKydGtAZ");
+    var utmMedium = getQueryVariable('utm_medium');
+    if (utmMedium) {
+        var queryString = window.location.search.substring(1);
+        window.location.hash = encodeURI(queryString);
+    }
+    analytics.page();
+    }}();
+    </script>
+
+<!-- Start VWO Async Smartcode -->
+<script type="text/javascript">
+window._vwo_code = window._vwo_code || (function(){
+var account_id=338524,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+is_spa=1,
+hide_element='body',
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){
+settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('//dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+(+is_spa)+'&r='+Math.random());return settings_timer; }};window._vwo_settings_timer = code.init(); return code; }());
+</script><script src="./Having fun with ES6 proxies - LogRocket Blog_files/j.php" type="text/javascript"></script>
+<!-- End VWO Async Smartcode -->
+
+    <script src="./Having fun with ES6 proxies - LogRocket Blog_files/LogRocket.min.js.下载"></script><script src="./Having fun with ES6 proxies - LogRocket Blog_files/logger.min.js.下载" async=""></script>
+    <script>
+        if (window.LogRocket) {
+            window.LogRocket.init('apphub/logrocket-website',{
+                dashboardHost: "https://staging.logrocket.com",
+                serverURL: "https://staging-i.logrocket.com/i",
+            });
+            fetch('https://ga.clearbit.com/v1/ga.js?authorization=pk_66a3fd2085d9f04c4d4b68a62b70ed7e').then(function(res){
+                res.text().then(function(val){
+                    var regex = /this.done((.*)}})/;
+                    var regexVal = regex.exec(val);
+                    if (!regexVal) {
+                        return;
+                    }
+                    var dict = regexVal[0].replace('this.done(', '');
+                    var clearbitData = JSON.parse(dict);
+                    window.clearbitData = clearbitData;
+                    window.LogRocket && window.LogRocket.identify(Math.random().toString(36).substring(7), {
+                        company: clearbitData.company.name,
+                        email: 'anonymous@' + clearbitData.company.domain,
+                    });
+                    window.analytics && window.analytics.track('clearbit domain', { domain: clearbitData.company.domain });
+                    try {
+                        if (window.source === 'gaw') {
+                            fetch('https://hooks.slack.com/services/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', {
+                              method: 'POST',
+                              body: JSON.stringify({text: '*Adwords Viewer:*\n' +
+'Name: ' + clearbitData.company.name + '\n' +
+'Domain: ' + clearbitData.company.domain
+                              })
+                            })
+                        }
+                    } catch (e) {}
+                });
+            })
+        }
+</script>
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','nyazy');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+<!-- Start Linkedin insight tag code -->
+<script type="text/javascript">
+_linkedin_partner_id = "1468257";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=1468257&fmt=gif" />
+</noscript>
+<link rel="dns-prefetch" href="https://widgets.wp.com/">
+<link rel="dns-prefetch" href="https://jetpack.wordpress.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://public-api.wordpress.com/">
+<link rel="dns-prefetch" href="https://0.gravatar.com/">
+<link rel="dns-prefetch" href="https://1.gravatar.com/">
+<link rel="dns-prefetch" href="https://2.gravatar.com/">
+<link rel="dns-prefetch" href="https://c0.wp.com/">
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<link rel="dns-prefetch" href="https://i0.wp.com/">
+<link rel="dns-prefetch" href="https://i1.wp.com/">
+<link rel="dns-prefetch" href="https://i2.wp.com/">
+<style type="text/css">img#wpstats{display:none}</style>			<style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+			<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+		<link rel="icon" href="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/06/cropped-cropped-favicon-196x196.png?fit=32%2C32&amp;ssl=1" sizes="32x32">
+<link rel="icon" href="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/06/cropped-cropped-favicon-196x196.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/06/cropped-cropped-favicon-196x196.png?fit=180%2C180&amp;ssl=1">
+<meta name="msapplication-TileImage" content="https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/06/cropped-cropped-favicon-196x196.png?fit=270%2C270&amp;ssl=1">
+			<link rel="stylesheet" type="text/css" id="wp-custom-css" href="./Having fun with ES6 proxies - LogRocket Blog_files/saved_resource(3)">
+		<style id="kirki-inline-styles">.btn-simple{background-color:#764abc;border-color:#764abc;}.prevnextlinks a, .article-post a, .post .btn.follow, .post .post-top-meta .author-description a, article.page a, .alertbar a{color:#764abc;}.post .btn.follow, .alertbar input[type="submit"]{border-color:#764abc;}blockquote{border-color:#764abc;}.entry-content input[type=submit], .alertbar input[type="submit"]{background-color:#764abc;border-color:#764abc;}p.sharecolour{color:#999999;}.shareitnow ul li a svg, .shareitnow a{fill:#b3b3b3;}.shareitnow li a{color:#b3b3b3;border-color:#d2d2d2;}#comments a{color:#764abc;}.comment-form input.submit{background-color:#764abc;border-color:#764abc;}footer.footer a{color:#764abc;}.carousel-excerpt .fontlight,body{font-family:PT Sans;font-size:15px;font-weight:400;line-height:1.5;color:#666666;}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family:PT Sans;font-weight:700;color:#111111;}.carousel-excerpt .title{font-family:PT Sans;font-size:30px;font-weight:700;text-transform:none;color:#ffffff;}.carousel-excerpt .fontlight{font-size:18px;font-weight:400;color:#ffffff;}.mediumnavigation .navbar-brand{font-family:Merriweather;font-size:26px;font-weight:700;}.navbar-toggleable-md .navbar-collapse{font-family:PT Sans;font-weight:400;}.article-post{font-family:Merriweather;font-weight:400;line-height:1.8;color:#222222;}.mediumnavigation, .dropdown-menu, .dropdown-item{background-color:#ffffff;}.mediumnavigation, .mediumnavigation a, .navbar-light .navbar-nav .nav-link{color:#764abc;}.navbar-light .navbar-brand{color:#111111;}.navbar-light .navbar-brand:hover{color:#02b875;}.customarea .btn.follow{border-color:#ffffff;color:#ffffff;}@media (max-width: 767px){.navbar-collapse{background-color:#ffffff;}}@font-face{font-display:swap;font-family:'PT Sans';font-style:normal;font-weight:400;src:local('PT Sans'), local('PTSans-Regular'), url(//blog.logrocket.com/wp-content/uploads/2019/07/jizaRExUiTo99u79P0Y.woff) format('woff');}@font-face{font-display:swap;font-family:'PT Sans';font-style:normal;font-weight:700;src:local('PT Sans Bold'), local('PTSans-Bold'), url(//blog.logrocket.com/wp-content/uploads/2019/07/jizfRExUiTo99u79B_mh4Oo.woff) format('woff');}@font-face{font-display:swap;font-family:'Merriweather';font-style:normal;font-weight:400;src:local('Merriweather Regular'), local('Merriweather-Regular'), url(//blog.logrocket.com/wp-content/uploads/2019/07/u-440qyriQwlOrhSvowK_l5OeA.woff) format('woff');}@font-face{font-display:swap;font-family:'Merriweather';font-style:normal;font-weight:700;src:local('Merriweather Bold'), local('Merriweather-Bold'), url(//blog.logrocket.com/wp-content/uploads/2019/07/u-4n0qyriQwlOrhSvowK_l52xwNpXA.woff) format('woff');}</style><link rel="stylesheet" type="text/css" href="./Having fun with ES6 proxies - LogRocket Blog_files/prettify.css"><script src="./Having fun with ES6 proxies - LogRocket Blog_files/va-b43971757a3793e7a17e80043b26fe55.js.下载" crossorigin="anonymous" type="text/javascript"></script><script src="./Having fun with ES6 proxies - LogRocket Blog_files/f(1).txt"></script><script src="./Having fun with ES6 proxies - LogRocket Blog_files/f(2).txt"></script></head>
+
+<body class="post-template-default single single-post postid-9477 single-format-standard">
+
+<style>
+    </style>
+
+
+<header class="navbar-light bg-white fixed-top mediumnavigation nav-up" style="top: 0px;"><div class="code-block code-block-20" style="margin: 8px 0; clear: both;">
+<a href="https://blog.logrocket.com/rethinking-frontend-apm/"><div class="metrics-banner">
+<div id="metrics-embed">
+<h6>New: LogRocket Metrics - Performance Monitoring for Frontend: <span style="text-decoration:underline;">See the Announcement</span> →</h6>
+</div>
+</div></a>
+
+<style>
+.metrics-banner {padding: 8px 0px; background: #764abc
+;color: #ffffff;}
+.metrics-banner h6 {color: #ffffff;text-align:center; margin: 0px !important;}
+#metrics-embed {width: 48.5%; margin: 0px auto; display: block;}
+.code-block-20 {margin: 0px !important; display:none;}
+.mediumnavigation {padding: 0px 0px 8px 0px;}
+.navarea {padding-top: 10px;}
+</style>
+</div>
+
+
+    <div class="container">
+
+
+
+        <div class="navarea">
+
+<div class="nav-left">
+
+  <a class="blog-logo" href="https://logrocket.com/" rel="home"><img class="lozad" src="./Having fun with ES6 proxies - LogRocket Blog_files/logo-frontend-monitoring.png" alt="LogRocket Blog"></a>
+
+<nav class="menu-container">
+
+        <div class="menu-primary-container"><ul id="menu-primary" class=""><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6 nav-item"><a href="https://blog.logrocket.com/" class="nav-link">Blog</a></li></ul></div></nav>
+
+</div>
+
+<div class="nav-right">
+
+  <div class="menu-container">
+    <div id="right-hand-nav" class="menu-right-hand-menu-container"><ul id="menu-right-hand-menu" class=""><li id="menu-item-877" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-877"><a href="https://app.logrocket.com/">Sign In</a></li>
+<li id="menu-item-878" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-878"><a href="https://logrocket.com/signup/" class="signup-blog">Free Trial</a></li>
+</ul></div>  </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+        <!-- Begin site-content
+		================================================== -->
+        <div class="site-content" style="margin-top: 54.9531px;">
+
+
+<div class="container"> 
+    <div class="row">         
+        <div class=" col-md-2 ">           
+            <div class="share" style="display: block;">
+                
+                <div class="sidebarapplause">
+                                </div>
+                
+                				<p class="sharecolour">
+					Share				</p>
+                
+<ul class="shareitnow"><li>
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Having%20fun%20with%20ES6%20proxies&amp;url=https%3A%2F%2Fblog.logrocket.com%2Fhaving-fun-with-es6-proxies%2F">
+        <i class="fa fa-twitter"></i>
+        </a>
+    </li><li>
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.logrocket.com%2Fhaving-fun-with-es6-proxies%2F">
+        <i class="fa fa-facebook"></i>
+        </a>
+    </li><li>
+        <a target="_blank" href="https://plus.google.com/share?url=https%3A%2F%2Fblog.logrocket.com%2Fhaving-fun-with-es6-proxies%2F">
+        <i class="fa fa-google"></i>
+        </a>
+    </li><li>
+        <a target="_blank" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fblog.logrocket.com%2Fhaving-fun-with-es6-proxies%2F&amp;media=https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?fit=730%2C490&amp;ssl=1&amp;description=Having%20fun%20with%20ES6%20proxies">
+        <i class="fa fa-pinterest"></i>
+        </a>
+    </li><li>
+        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fblog.logrocket.com%2Fhaving-fun-with-es6-proxies%2F&amp;title=Having%20fun%20with%20ES6%20proxies">
+        <i class="fa fa-linkedin"></i>
+        </a>
+    </li></ul>                		        
+                
+                                <div class="sep"></div>
+                <div class="hidden-xs-down">      
+
+                    <p>
+                        Reply                    </p>
+                    <ul>
+                        <li>
+                        <a class="smoothscroll" href="https://blog.logrocket.com/having-fun-with-es6-proxies/#comments">0<br>
+                        <svg class="svgIcon-use" width="29" height="29" viewBox="0 0 29 29"><path d="M21.27 20.058c1.89-1.826 2.754-4.17 2.754-6.674C24.024 8.21 19.67 4 14.1 4 8.53 4 4 8.21 4 13.384c0 5.175 4.53 9.385 10.1 9.385 1.007 0 2-.14 2.95-.41.285.25.592.49.918.7 1.306.87 2.716 1.31 4.19 1.31.276-.01.494-.14.6-.36a.625.625 0 0 0-.052-.65c-.61-.84-1.042-1.71-1.282-2.58a5.417 5.417 0 0 1-.154-.75zm-3.85 1.324l-.083-.28-.388.12a9.72 9.72 0 0 1-2.85.424c-4.96 0-8.99-3.706-8.99-8.262 0-4.556 4.03-8.263 8.99-8.263 4.95 0 8.77 3.71 8.77 8.27 0 2.25-.75 4.35-2.5 5.92l-.24.21v.32c0 .07 0 .19.02.37.03.29.1.6.19.92.19.7.49 1.4.89 2.08-.93-.14-1.83-.49-2.67-1.06-.34-.22-.88-.48-1.16-.74z"></path></svg>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                            </div>			                                
+        </div>
+        
+                    			                <div class="col-md-8 flex-first flex-md-unordered post-9477 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-es6" id="post-9477"> 
+                    <div class="mainheading">
+                       
+                                                <!-- Begin Author box -->                                     
+                        <div class="row post-top-meta hidden-md-down"> 
+                            <div class="col-md-2 col-xs-12"> 
+                                <a href="https://blog.logrocket.com/author/maciejcieslar/">
+                                    <img alt="" src="./Having fun with ES6 proxies - LogRocket Blog_files/maciejcieslar.jpg" class="avatar avatar-72 photo jetpack-lazy-image jetpack-lazy-image--handled" height="72" width="72" data-lazy-loaded="1"><noscript><img alt='' src='https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2019/04/maciejcieslar.jpg?resize=150%2C150&ssl=1' class='avatar avatar-72 photo' height='72' width='72' /></noscript>                                </a>
+                            </div>                                         
+                            <div class="col-md-10 col-xs-12"> 
+                                <a class="text-capitalize link-dark" href="https://blog.logrocket.com/author/maciejcieslar/">
+                                Maciej Cieślar <span class="btn follow">Follow</span></a>
+                                <span class="author-description d-block">A JavaScript developer and a blogger @ https://www.mcieslar.com/</span> 
+                            </div>                                         
+                        </div>
+                                                 
+                                                
+                        <h1 class="posttitle">Having fun with ES6 proxies</h1>
+					    <h2 class="post-subtitle"></h2>
+
+                        <p>
+                                                        <span class="post-date"><time class="post-date">
+                            November 13, 2019                            </time></span>
+                                                        
+                                                        <span class="dot"></span>
+                            <span class="readingtime">6 min read</span>
+						    <span class="wordcount">1680</span>
+
+                                                    </p> 
+                    </div>
+                    
+                  <img width="730" height="490" src="./Having fun with ES6 proxies - LogRocket Blog_files/fun-with-es6-proxies.jpeg" class="featured-image img-fluid wp-post-image jetpack-lazy-image jetpack-lazy-image--handled" alt="Having Fun With ES6 Proxies" data-attachment-id="9628" data-permalink="https://blog.logrocket.com/having-fun-with-es6-proxies/fun-with-es6-proxies/" data-orig-file="https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?fit=730%2C490&amp;ssl=1" data-orig-size="730,490" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;1&quot;}" data-image-title="Having fun with ES6 proxies" data-image-description="" data-medium-file="https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?fit=300%2C201&amp;ssl=1" data-large-file="https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?fit=730%2C490&amp;ssl=1" srcset="https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?w=730&amp;ssl=1 730w, https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/fun-with-es6-proxies.jpeg?resize=300%2C201&amp;ssl=1 300w" data-lazy-loaded="1" sizes="(max-width: 730px) 100vw, 730px">                    <article class="article-post">
+                                                <p><code class=" prettyprinted" style=""><span class="typ">Proxy</span></code> is one of the most overlooked concepts introduced in the ES6 version of JavaScript.</p>
+<p>Admittedly, it isn’t particularly useful on a day-to-day basis, but it is bound to come in handy at some point in your future.</p>
+<h2>The basics</h2>
+<p>The <code class=" prettyprinted" style=""><span class="typ">Proxy</span></code> object is used to define a custom behavior for fundamental operations such as property lookup, assignment, and function invocation.</p>
+<p>The most basic example of a proxy would be:</p>
+<pre class=" prettyprinted" style=""><span class="kwd">const</span><span class="pln"> obj </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ a</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+ b</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">const</span><span class="pln"> proxiedObj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Proxy</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ </span><span class="kwd">get</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">target</span><span class="pun">,</span><span class="pln"> propertyName</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="com">// get the value from the "original" object</span><span class="pln">
+   </span><span class="kwd">const</span><span class="pln"> </span><span class="kwd">value</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> target</span><span class="pun">[</span><span class="pln">propertyName</span><span class="pun">];</span><span class="pln">
+
+   </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="kwd">value</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> </span><span class="kwd">value</span><span class="pln"> </span><span class="pun">!==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     console</span><span class="pun">.</span><span class="pln">warn</span><span class="pun">(</span><span class="str">'Trying to get non-existing property!'</span><span class="pun">);</span><span class="pln">
+
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+
+   </span><span class="com">// return the incremented value</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">value</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+ </span><span class="pun">},</span><span class="pln">
+ </span><span class="kwd">set</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">target</span><span class="pun">,</span><span class="pln"> key</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="com">// decrement each value before saving</span><span class="pln">
+   target</span><span class="pun">[</span><span class="pln">key</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">value</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+
+   </span><span class="com">// return true to indicate successful operation</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+ </span><span class="pun">},</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+
+proxiedObj</span><span class="pun">.</span><span class="pln">a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln">
+
+console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">proxiedObj</span><span class="pun">.</span><span class="pln">a</span><span class="pun">);</span><span class="pln"> </span><span class="com">// -&gt; incremented obj.a (5)</span><span class="pln">
+console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">.</span><span class="pln">a</span><span class="pun">);</span><span class="pln"> </span><span class="com">// -&gt; 4</span><span class="pln">
+
+console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">proxiedObj</span><span class="pun">.</span><span class="pln">c</span><span class="pun">);</span><span class="pln"> </span><span class="com">// -&gt; 0, logs the warning (the c property doesn't exist)</span></pre>
+<p>We have intercepted the default behavior of both <code class=" prettyprinted" style=""><span class="kwd">get</span></code> and <code class=" prettyprinted" style=""><span class="kwd">set</span></code> operations by defining the handlers with their respective names in the object provided to the proxy constructor. Now each <code class=" prettyprinted" style=""><span class="kwd">get</span></code> operation will return the incremented value of the property, while <code class=" prettyprinted" style=""><span class="kwd">set</span></code> will decrement the value before saving it in the target object.</p>
+<p>What’s important to remember with proxies is that once a proxy is created, it should be the only way to interact with the object.</p>
+<h3>Different kinds of traps</h3>
+<p>There are many traps (handlers that intercept the object’s default behavior) aside from <code class=" prettyprinted" style=""><span class="kwd">get</span></code> and <code class=" prettyprinted" style=""><span class="kwd">set</span></code>, but we won’t be using any of them in this article. With that being said, if you are interested in reading more about them, here’s the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">documentation</a>.</p>
+<h2>Having fun</h2>
+<p>Now that we know how proxies work, let’s have some fun with them.</p>
+<h3>Observing object’s state</h3>
+<p>As it has been stated before it is very easy to intercept operations with proxies. To observe an object’s state is to be notified every time there’s an assignment operation.</p>
+<pre class=" prettyprinted" style=""><span class="kwd">const</span><span class="pln"> observe </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">object</span><span class="pun">,</span><span class="pln"> callback</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Proxy</span><span class="pun">(</span><span class="kwd">object</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">set</span><span class="pun">(</span><span class="pln">target</span><span class="pun">,</span><span class="pln"> propKey</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">const</span><span class="pln"> oldValue </span><span class="pun">=</span><span class="pln"> target</span><span class="pun">[</span><span class="pln">propKey</span><span class="pun">];</span><span class="pln">
+   
+     target</span><span class="pun">[</span><span class="pln">propKey</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">;</span><span class="pln">
+
+     callback</span><span class="pun">({</span><span class="pln">
+       </span><span class="kwd">property</span><span class="pun">:</span><span class="pln"> propKey</span><span class="pun">,</span><span class="pln">
+       newValue</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">,</span><span class="pln">
+       oldValue</span><span class="pun">,</span><span class="pln">
+     </span><span class="pun">});</span><span class="pln">
+
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+ </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">const</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> observe</span><span class="pun">({</span><span class="pln"> b</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> arg </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">arg</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+
+a</span><span class="pun">.</span><span class="pln">b </span><span class="pun">=</span><span class="pln"> </span><span class="lit">5</span><span class="pun">;</span><span class="pln"> </span><span class="com">// -&gt; logs from the provided callback: {property: "b", oldValue: 1, newValue: 5}</span></pre>
+<p>And that’s all we have to do — invoke the provided callback every time the <code class=" prettyprinted" style=""><span class="kwd">set</span></code> handler is fired.</p>
+<p>As an argument to the <code class=" prettyprinted" style=""><span class="pln">callback</span></code>, we provide an object with three properties: the name of the changed property, the old value, and the new value.</p>
+<p>Prior to executing the <code class=" prettyprinted" style=""><span class="pln">callback</span></code>, we assign the new value in the target object so the assignment actually takes place. We have to return <code class=" prettyprinted" style=""><span class="kwd">true</span></code> to indicate that the operation has been successful; otherwise, it would throw a <code class=" prettyprinted" style=""><span class="typ">TypeError</span></code>.</p>
+<p>Here’s a <a href="https://codesandbox.io/s/proxy-observe-s5sjv?fontsize=14">live example</a>.</p>
+<h3>Validating properties on <code class=" prettyprinted" style=""><span class="kwd">set</span></code></h3>
+<p>If you think about it, proxies are a good place to implement validation — they are not tightly coupled with the data itself. Let’s implement a simple validation proxy.</p>
+<p>As in the previous example, we have to intercept the <code class=" prettyprinted" style=""><span class="kwd">set</span></code> operation. We would like to end up with the following way of declaring data validation:</p>
+<pre class=" prettyprinted" style=""><span class="kwd">const</span><span class="pln"> personWithValidation </span><span class="pun">=</span><span class="pln"> withValidation</span><span class="pun">(</span><span class="pln">person</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ firstName</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">validators</span><span class="pun">.</span><span class="kwd">string</span><span class="pun">.</span><span class="pln">isString</span><span class="pun">(),</span><span class="pln"> validators</span><span class="pun">.</span><span class="kwd">string</span><span class="pun">.</span><span class="pln">longerThan</span><span class="pun">(</span><span class="lit">3</span><span class="pun">)],</span><span class="pln">
+ lastName</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">validators</span><span class="pun">.</span><span class="kwd">string</span><span class="pun">.</span><span class="pln">isString</span><span class="pun">(),</span><span class="pln"> validators</span><span class="pun">.</span><span class="kwd">string</span><span class="pun">.</span><span class="pln">longerThan</span><span class="pun">(</span><span class="lit">7</span><span class="pun">)],</span><span class="pln">
+ age</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">validators</span><span class="pun">.</span><span class="pln">number</span><span class="pun">.</span><span class="pln">isNumber</span><span class="pun">(),</span><span class="pln"> validators</span><span class="pun">.</span><span class="pln">number</span><span class="pun">.</span><span class="pln">greaterThan</span><span class="pun">(</span><span class="lit">0</span><span class="pun">)]</span><span class="pln">
+</span><span class="pun">});</span></pre>
+<p>In order to achieve this, we define the <code class=" prettyprinted" style=""><span class="pln">withValidation</span></code> function like so:</p>
+<pre class=" prettyprinted" style=""><span class="kwd">const</span><span class="pln"> withValidation </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">object</span><span class="pun">,</span><span class="pln"> schema</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Proxy</span><span class="pun">(</span><span class="kwd">object</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">set</span><span class="pun">:</span><span class="pln"> </span><span class="pun">(</span><span class="pln">target</span><span class="pun">,</span><span class="pln"> key</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">const</span><span class="pln"> validators </span><span class="pun">=</span><span class="pln"> schema</span><span class="pun">[</span><span class="pln">key</span><span class="pun">];</span><span class="pln">
+
+     </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">validators </span><span class="pun">||</span><span class="pln"> </span><span class="pun">!</span><span class="pln">validators</span><span class="pun">.</span><span class="pln">length</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       target</span><span class="pun">[</span><span class="pln">key</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">;</span><span class="pln">
+
+       </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+     </span><span class="pun">}</span><span class="pln">
+
+     </span><span class="kwd">const</span><span class="pln"> shouldSet </span><span class="pun">=</span><span class="pln"> validators</span><span class="pun">.</span><span class="pln">every</span><span class="pun">(</span><span class="pln">validator </span><span class="pun">=&gt;</span><span class="pln"> validator</span><span class="pun">(</span><span class="kwd">value</span><span class="pun">));</span><span class="pln">
+
+     </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">shouldSet</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="com">// or get some custom error</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">;</span><span class="pln">
+     </span><span class="pun">}</span><span class="pln">
+
+     target</span><span class="pun">[</span><span class="pln">key</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">;</span><span class="pln">
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+ </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">};</span></pre>
+<p>First we check whether or not there are <code class=" prettyprinted" style=""><span class="pln">validators</span></code> in the provided schema for the property that is currently being assigned — if there aren’t, there is nothing to validate and we simply assign the value.</p>
+<p>If there are indeed <code class=" prettyprinted" style=""><span class="pln">validators</span></code> defined for the property, we assert that all of them return <code class=" prettyprinted" style=""><span class="kwd">true</span></code> before assigning. Should one of the validators return <code class=" prettyprinted" style=""><span class="kwd">false</span></code>, the whole <code class=" prettyprinted" style=""><span class="kwd">set</span></code> operation returns false, causing the proxy to throw an error.</p>
+<p>The last thing to do is to create the <code class=" prettyprinted" style=""><span class="pln">validators</span></code> object.</p>
+<pre class=" prettyprinted" style=""><span class="kwd">const</span><span class="pln"> validators </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ number</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   greaterThan</span><span class="pun">:</span><span class="pln"> expectedValue </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">value</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">value</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> expectedValue</span><span class="pun">;</span><span class="pln">
+     </span><span class="pun">};</span><span class="pln">
+   </span><span class="pun">},</span><span class="pln">
+   isNumber</span><span class="pun">:</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">value</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Number</span><span class="pun">(</span><span class="kwd">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">===</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">;</span><span class="pln">
+     </span><span class="pun">};</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+ </span><span class="pun">},</span><span class="pln">
+ </span><span class="kwd">string</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   longerThan</span><span class="pun">:</span><span class="pln"> expectedLength </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">value</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">.</span><span class="pln">length </span><span class="pun">&gt;</span><span class="pln"> expectedLength</span><span class="pun">;</span><span class="pln">
+     </span><span class="pun">};</span><span class="pln">
+   </span><span class="pun">},</span><span class="pln">
+   isString</span><span class="pun">:</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">value</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">String</span><span class="pun">(</span><span class="kwd">value</span><span class="pun">)</span><span class="pln"> </span><span class="pun">===</span><span class="pln"> </span><span class="kwd">value</span><span class="pun">;</span><span class="pln">
+     </span><span class="pun">};</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+ </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">};</span></pre>
+<p>The <code class=" prettyprinted" style=""><span class="pln">validators</span></code> object contains validation functions grouped by the type they should validate. Each validator on invocation takes the necessary arguments, like <code class=" prettyprinted" style=""><span class="pln">validators</span><span class="pun">.</span><span class="pln">number</span><span class="pun">.</span><span class="pln">greaterThan</span><span class="pun">(</span><span class="lit">0</span><span class="pun">)</span></code>, and returns a function. The validation happens in the returned function.</p>
+<p>We could extend the validation with all kinds of amazing features, such as virtual fields or throwing errors from inside the validator to indicate what went wrong, but that would make the code less readable and is outside the scope of this article.</p>
+<p>Here’s a <a href="https://codesandbox.io/s/proxy-validation-2858r?fontsize=14">live example</a>.</p>
+<h3>Making code lazy</h3>
+<p>For the final — and hopefully most interesting — example, let’s create a proxy that makes all the operations lazy.</p>
+<p>Here’s a very simple class called <code class=" prettyprinted" style=""><span class="typ">Calculator</span></code>, which contains a few basic arithmetic operations.</p>
+<pre class=" prettyprinted" style=""><span class="kwd">class</span><span class="pln"> </span><span class="typ">Calculator</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ </span><span class="kwd">add</span><span class="pun">(</span><span class="pln">a</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> a </span><span class="pun">+</span><span class="pln"> b</span><span class="pun">;</span><span class="pln">
+ </span><span class="pun">}</span><span class="pln">
+
+ subtract</span><span class="pun">(</span><span class="pln">a</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> a </span><span class="pun">-</span><span class="pln"> b</span><span class="pun">;</span><span class="pln">
+ </span><span class="pun">}</span><span class="pln">
+
+ multiply</span><span class="pun">(</span><span class="pln">a</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> a </span><span class="pun">*</span><span class="pln"> b</span><span class="pun">;</span><span class="pln">
+ </span><span class="pun">}</span><span class="pln">
+
+ divide</span><span class="pun">(</span><span class="pln">a</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> a </span><span class="pun">/</span><span class="pln"> b</span><span class="pun">;</span><span class="pln">
+ </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>Now normally, if we ran the following line:</p>
+<pre class=" prettyprinted" style=""><span class="kwd">new</span><span class="pln"> </span><span class="typ">Calculator</span><span class="pun">().</span><span class="kwd">add</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="com">// -&gt; 6</span></pre>
+<p>The result would be 6.</p>
+<p>The code is executed on the spot. What we would like is to have the code wait for the signal to be run, like a <code class=" prettyprinted" style=""><span class="pln">run</span></code> method. This way the operation will be postponed until it is needed — or not executed at all if there is never a need.</p>
+<p>So the following code, instead of 6, would return the instance of the <code class=" prettyprinted" style=""><span class="typ">Calculator</span></code> class itself:</p>
+<pre class=" prettyprinted" style=""><span class="pln">lazyCalculator</span><span class="pun">.</span><span class="kwd">add</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">)</span><span class="pln"> </span><span class="com">// -&gt; Calculator {}</span></pre>
+<p>Which would give us another nice feature: method chaining.</p>
+<pre class=" prettyprinted" style=""><span class="pln">lazyCalculator</span><span class="pun">.</span><span class="kwd">add</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">).</span><span class="pln">divide</span><span class="pun">(</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">).</span><span class="pln">run</span><span class="pun">()</span><span class="pln"> </span><span class="com">// -&gt; 1</span></pre>
+<p>The problem with that approach is that in <code class=" prettyprinted" style=""><span class="pln">divide</span></code>, we have no clue of what the result of <code class=" prettyprinted" style=""><span class="kwd">add</span></code> is, which makes it kind of useless. Since we control the arguments, we can easily provide a way to make the result available through a previously defined variable — <code class=" prettyprinted" style=""><span class="pln">$</span></code>, for example.</p>
+<pre class=" prettyprinted" style=""><span class="pln">lazyCalculator</span><span class="pun">.</span><span class="kwd">add</span><span class="pun">(</span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">).</span><span class="pln">subtract</span><span class="pun">(</span><span class="pln">$</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">).</span><span class="pln">multiply</span><span class="pun">(</span><span class="pln">$</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">).</span><span class="pln">run</span><span class="pun">();</span><span class="pln"> </span><span class="com">// -&gt; 100</span></pre>
+<p><code class=" prettyprinted" style=""><span class="pln">$</span></code> here is just a constant <code class=" prettyprinted" style=""><span class="typ">Symbol</span></code>. During execution, we dynamically replace it with the result returned from the previous method.</p>
+<pre class=" prettyprinted" style=""><span class="kwd">const</span><span class="pln"> $ </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Symbol</span><span class="pun">(</span><span class="str">'RESULT_ARGUMENT'</span><span class="pun">);</span></pre>
+<p>Now that we have a fair understanding of what do we want to implement, let’s get right to it.</p>
+<p>Let’s create a function called <code class=" prettyprinted" style=""><span class="pln">lazify</span></code>. The function creates a proxy that intercepts the <code class=" prettyprinted" style=""><span class="kwd">get</span></code> operation.</p>
+<pre class=" prettyprinted" style=""><span class="kwd">function</span><span class="pln"> lazify</span><span class="pun">(</span><span class="pln">instance</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ </span><span class="kwd">const</span><span class="pln"> operations </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[];</span><span class="pln">
+
+ </span><span class="kwd">const</span><span class="pln"> proxy </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Proxy</span><span class="pun">(</span><span class="pln">instance</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">get</span><span class="pun">(</span><span class="pln">target</span><span class="pun">,</span><span class="pln"> propKey</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">const</span><span class="pln"> propertyOrMethod </span><span class="pun">=</span><span class="pln"> target</span><span class="pun">[</span><span class="pln">propKey</span><span class="pun">];</span><span class="pln">
+
+     </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">propertyOrMethod</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="kwd">throw</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Error</span><span class="pun">(</span><span class="str">'No property found.'</span><span class="pun">);</span><span class="pln">
+     </span><span class="pun">}</span><span class="pln">
+
+     </span><span class="com">// is not a function</span><span class="pln">
+     </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">typeof</span><span class="pln"> propertyOrMethod </span><span class="pun">!==</span><span class="pln"> </span><span class="str">'function'</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> target</span><span class="pun">[</span><span class="pln">propKey</span><span class="pun">];</span><span class="pln">
+     </span><span class="pun">}</span><span class="pln">
+
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(...</span><span class="pln">args</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       operations</span><span class="pun">.</span><span class="pln">push</span><span class="pun">(</span><span class="pln">internalResult </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+         </span><span class="kwd">return</span><span class="pln"> propertyOrMethod</span><span class="pun">.</span><span class="pln">apply</span><span class="pun">(</span><span class="pln">
+           target</span><span class="pun">,</span><span class="pln">
+           </span><span class="pun">[...</span><span class="pln">args</span><span class="pun">].</span><span class="pln">map</span><span class="pun">(</span><span class="pln">arg </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">(</span><span class="pln">arg </span><span class="pun">===</span><span class="pln"> $ </span><span class="pun">?</span><span class="pln"> internalResult </span><span class="pun">:</span><span class="pln"> arg</span><span class="pun">))</span><span class="pln">
+         </span><span class="pun">);</span><span class="pln">
+       </span><span class="pun">});</span><span class="pln">
+
+       </span><span class="kwd">return</span><span class="pln"> proxy</span><span class="pun">;</span><span class="pln">
+     </span><span class="pun">};</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+ </span><span class="pun">});</span><span class="pln">
+
+ </span><span class="kwd">return</span><span class="pln"> proxy</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>Inside the <code class=" prettyprinted" style=""><span class="kwd">get</span></code> trap, we check whether or not the requested property exists; if it doesn’t, we throw an error. If the property is not a function, we return it without doing anything.</p>
+<p>Proxies don’t have a way of intercepting method calls. Instead, they are treating them as two operations: the <code class=" prettyprinted" style=""><span class="kwd">get</span></code> operation and a function invocation. Our <code class=" prettyprinted" style=""><span class="kwd">get</span></code> handler has to act accordingly.</p>
+<p>Now that we are sure the property is a function, we return our own function, which acts as a wrapper. When the wrapper function is executed, it adds yet another new function to the operations array. The wrapper function has to return the proxy to make it possible to chain methods.</p>
+<p>Inside the function provided to the operations array, we execute the method with the arguments provided to the wrapper. The function is going to be called with the result argument, allowing us to replace all the <code class=" prettyprinted" style=""><span class="pln">$</span></code> with the result returned from the previous method.</p>
+<p>This way we delay the execution until requested.</p>
+<p>Now that we have built the underlying mechanism to store the operations, we need to add a way to run the functions — the <code class=" prettyprinted" style=""><span class="pun">.</span><span class="pln">run</span><span class="pun">()</span></code> method.</p>
+<p>This is fairly easy to do. All we have to do is check whether the requested property name equals run. If it does, we return a wrapper function (since run acts as a method). Inside the wrapper, we execute all the functions from the operations array.</p>
+<p>The final code looks like this:</p>
+<pre class=" prettyprinted" style=""><span class="kwd">const</span><span class="pln"> executeOperations </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">operations</span><span class="pun">,</span><span class="pln"> args</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ </span><span class="kwd">return</span><span class="pln"> operations</span><span class="pun">.</span><span class="pln">reduce</span><span class="pun">((</span><span class="pln">args</span><span class="pun">,</span><span class="pln"> method</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">[</span><span class="pln">method</span><span class="pun">(...</span><span class="pln">args</span><span class="pun">)];</span><span class="pln">
+ </span><span class="pun">},</span><span class="pln"> args</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">const</span><span class="pln"> $ </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Symbol</span><span class="pun">(</span><span class="str">'RESULT_ARGUMENT'</span><span class="pun">);</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> lazify</span><span class="pun">(</span><span class="pln">instance</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ </span><span class="kwd">const</span><span class="pln"> operations </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[];</span><span class="pln">
+
+ </span><span class="kwd">const</span><span class="pln"> proxy </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Proxy</span><span class="pun">(</span><span class="pln">instance</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">get</span><span class="pun">(</span><span class="pln">target</span><span class="pun">,</span><span class="pln"> propKey</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+     </span><span class="kwd">const</span><span class="pln"> propertyOrMethod </span><span class="pun">=</span><span class="pln"> target</span><span class="pun">[</span><span class="pln">propKey</span><span class="pun">];</span><span class="pln">
+
+     </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">propKey </span><span class="pun">===</span><span class="pln"> </span><span class="str">'run'</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(...</span><span class="pln">args</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+         </span><span class="kwd">return</span><span class="pln"> executeOperations</span><span class="pun">(</span><span class="pln">operations</span><span class="pun">,</span><span class="pln"> args</span><span class="pun">)[</span><span class="lit">0</span><span class="pun">];</span><span class="pln">
+       </span><span class="pun">};</span><span class="pln">
+     </span><span class="pun">}</span><span class="pln">
+
+     </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">propertyOrMethod</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="kwd">throw</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Error</span><span class="pun">(</span><span class="str">'No property found.'</span><span class="pun">);</span><span class="pln">
+     </span><span class="pun">}</span><span class="pln">
+
+     </span><span class="com">// is not a function</span><span class="pln">
+     </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">typeof</span><span class="pln"> propertyOrMethod </span><span class="pun">!==</span><span class="pln"> </span><span class="str">'function'</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> target</span><span class="pun">[</span><span class="pln">propKey</span><span class="pun">];</span><span class="pln">
+     </span><span class="pun">}</span><span class="pln">
+
+     </span><span class="kwd">return</span><span class="pln"> </span><span class="pun">(...</span><span class="pln">args</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       operations</span><span class="pun">.</span><span class="pln">push</span><span class="pun">(</span><span class="pln">internalResult </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+         </span><span class="kwd">return</span><span class="pln"> propertyOrMethod</span><span class="pun">.</span><span class="pln">apply</span><span class="pun">(</span><span class="pln">
+           target</span><span class="pun">,</span><span class="pln">
+           </span><span class="pun">[...</span><span class="pln">args</span><span class="pun">].</span><span class="pln">map</span><span class="pun">(</span><span class="pln">arg </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">(</span><span class="pln">arg </span><span class="pun">===</span><span class="pln"> $ </span><span class="pun">?</span><span class="pln"> internalResult </span><span class="pun">:</span><span class="pln"> arg</span><span class="pun">))</span><span class="pln">
+         </span><span class="pun">);</span><span class="pln">
+       </span><span class="pun">});</span><span class="pln">
+
+       </span><span class="kwd">return</span><span class="pln"> proxy</span><span class="pun">;</span><span class="pln">
+     </span><span class="pun">};</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+ </span><span class="pun">});</span><span class="pln">
+
+ </span><span class="kwd">return</span><span class="pln"> proxy</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>The <code class=" prettyprinted" style=""><span class="pln">executeOperations</span></code> function takes an array of functions and executes them one by one, passing the result of the previous one to the invocation of the next one.</p>
+<p>And now for the final example:</p>
+<pre class=" prettyprinted" style=""><span class="kwd">const</span><span class="pln"> lazyCalculator </span><span class="pun">=</span><span class="pln"> lazify</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Calculator</span><span class="pun">());</span><span class="pln">
+
+</span><span class="kwd">const</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> lazyCalculator
+ </span><span class="pun">.</span><span class="kwd">add</span><span class="pun">(</span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">)</span><span class="pln">
+ </span><span class="pun">.</span><span class="pln">subtract</span><span class="pun">(</span><span class="pln">$</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">)</span><span class="pln">
+ </span><span class="pun">.</span><span class="pln">multiply</span><span class="pun">(</span><span class="pln">$</span><span class="pun">,</span><span class="pln"> </span><span class="lit">10</span><span class="pun">);</span><span class="pln">
+
+console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">a</span><span class="pun">.</span><span class="pln">run</span><span class="pun">());</span><span class="pln"> </span><span class="com">// -&gt; 100</span></pre>
+<p>If you are interested in adding more functionality I have added a few more features to the <code class=" prettyprinted" style=""><span class="pln">lazify</span></code> function — asynchronous execution, custom method names, and a possibility to add custom functions through the <code class=" prettyprinted" style=""><span class="pun">.</span><span class="pln">chain</span><span class="pun">()</span></code> method. Both versions of the <code class=" prettyprinted" style=""><span class="pln">lazify</span></code> function are available in the <a href="https://codesandbox.io/s/lazy-proxy-q7tbn?fontsize=14">live example</a>.</p>
+<h2>Summary</h2>
+<p>Now that you have seen proxies in action, I hope that you could find a good use for them in your own codebase.</p>
+<p>Proxies have many more interesting uses than those covered here, such as implementing negative indices and catching all the nonexistent properties in an object. Be careful, though: proxies are a bad choice when <a href="http://thecodebarbarian.com/thoughts-on-es6-proxies-performance">performance</a> is an important factor.</p><div class="code-block code-block-2" style="margin: 8px 0; clear: both;">
+<div class="base-cta"><h2>Plug: <a class="signup signup-blog" href="https://logrocket.com/signup/" target="_blank" rel="noopener noreferrer">LogRocket</a>, a DVR for web apps</h2>
+<a href="https://logrocket.com/signup/" class="signup signup-blog" target="_blank" rel="noopener noreferrer"><img class="alignnone size-full wp-image-46 jetpack-lazy-image jetpack-lazy-image--handled" src="./Having fun with ES6 proxies - LogRocket Blog_files/1d0cd-1s_rmyo6nbrasp-xtvbaxfg.png" alt="LogRocket Dashboard Free Trial Banner" width="1200" height="677" data-recalc-dims="1" data-lazy-loaded="1"><noscript><img class="alignnone size-full wp-image-46" src="https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2017/03/1d0cd-1s_rmyo6nbrasp-xtvbaxfg.png?resize=1200%2C677&#038;ssl=1" alt="LogRocket Dashboard Free Trial Banner" width="1200" height="677" data-recalc-dims="1" /></noscript></a>
+
+<p style="margin-top:15px;"><a href="https://logrocket.com/signup/" target="_blank" rel="noopener noreferrer" class="signup-blog">LogRocket</a> is a frontend application monitoring solution that lets you replay problems as if they happened in your own browser. Instead of guessing why errors happen, or asking users for screenshots and log dumps, LogRocket lets you replay the session to quickly understand what went wrong. It works perfectly with any app, regardless of framework, and has plugins to log additional context from Redux, Vuex, and @ngrx/store.</p>
+
+<p>In addition to logging Redux actions and state, LogRocket records console logs, JavaScript errors, stacktraces, network requests/responses with headers + bodies, browser metadata, and custom logs. It also instruments the DOM to record the HTML and CSS on the page, recreating pixel-perfect videos of even the most complex single-page apps.</p>
+
+<a class="signup signup-blog" href="https://logrocket.com/signup/" target="_blank" rel="noopener noreferrer">Try it for free</a>.</div>
+</div>
+
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-9477" class="share-twitter sd-button share-icon" href="https://blog.logrocket.com/having-fun-with-es6-proxies/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-reddit"><a rel="nofollow noopener noreferrer" data-shared="" class="share-reddit sd-button share-icon" href="https://blog.logrocket.com/having-fun-with-es6-proxies/?share=reddit&amp;nb=1" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-linkedin"><a rel="nofollow noopener noreferrer" data-shared="sharing-linkedin-9477" class="share-linkedin sd-button share-icon" href="https://blog.logrocket.com/having-fun-with-es6-proxies/?share=linkedin&amp;nb=1" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-9477" class="share-facebook sd-button share-icon" href="https://blog.logrocket.com/having-fun-with-es6-proxies/?share=facebook&amp;nb=1" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div>                        <div class="clearfix"></div>
+                                                <div class="clearfix"></div>
+                    </article>
+                            
+                                             <!-- Begin Author box -->                                     
+                        <div class="row post-top-meta hidden-lg-up"> 
+                            <div class="col-md-2 col-xs-4"> 
+                                <img alt="" src="./Having fun with ES6 proxies - LogRocket Blog_files/maciejcieslar.jpg" class="avatar avatar-72 photo jetpack-lazy-image" height="72" width="72" data-lazy-src="https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2019/04/maciejcieslar.jpg?resize=150%2C150&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img alt='' src='https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2019/04/maciejcieslar.jpg?resize=150%2C150&ssl=1' class='avatar avatar-72 photo' height='72' width='72' /></noscript>                            </div>                                         
+                            <div class="col-md-10 col-xs-8"> 
+                                <a class="text-capitalize link-dark" href="https://blog.logrocket.com/author/maciejcieslar/">
+                                Maciej Cieślar <span class="btn follow">Follow</span></a>
+                                <span class="author-description d-block">A JavaScript developer and a blogger @ https://www.mcieslar.com/</span> 
+                            </div>                                         
+                        </div>
+                                         
+                    <div class="after-post-tags">
+                                                    <ul class="post-categories">
+	<li><a href="https://blog.logrocket.com/category/uncategorized/" rel="category tag">Uncategorized</a></li></ul>                                                                            <ul class="post-categories aretags">
+                            <li><a href="https://blog.logrocket.com/tag/es6/">#es6</a></li>                             </ul>
+                                            </div>
+                    
+                  
+                    <div class="row mb-5 prevnextlinks justify-content-center align-items-center"> 
+                       <div class="col-md-6 col-xs-12 rightborder pl-0"><div class="thepostlink">« <a href="https://blog.logrocket.com/unit-and-integration-testing-for-node-js-apps/" rel="prev">Unit and integration testing for Node.js apps</a></div></div>
+                       <div class="col-md-6 col-xs-12 text-right pr-0"><div class="thepostlink"><a href="https://blog.logrocket.com/building-payments-system-react-stripe/" rel="next">Building a payments system with React and Stripe</a> »</div></div>
+                    </div>
+                    
+                </div>
+        
+                    
+         
+        
+        
+    </div>                 
+</div>             
+          
+<div class="hideshare"></div>
+
+    <div class="graybg"> 
+        <div class="container"> 
+                <div class="row justify-content-center listrecent listrelated">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+            
+<div class="card post height262">
+<a class="thumbimage" href="https://blog.logrocket.com/use-hooks-and-context-not-react-and-redux/" style="background-image:url(https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/hooks-context-not-react-redux.jpeg?fit=730%2C488&amp;ssl=1);"></a><div class="card-block">
+    <h2 class="card-title">
+        <a href="https://blog.logrocket.com/use-hooks-and-context-not-react-and-redux/">Use Hooks + Context, not React + Redux</a>
+    </h2>
+            <div class="metafooter">
+            <div class="wrapfooter">
+                <span class="meta-footer-thumb">
+                    <a href="https://blog.logrocket.com/author/ebenezerdon/">
+                    <img alt="" src="./Having fun with ES6 proxies - LogRocket Blog_files/ebenezer-don.png" class="avatar avatar-40 photo jetpack-lazy-image jetpack-lazy-image--handled" height="40" width="40" data-lazy-loaded="1"><noscript><img alt='' src='https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/ebenezer-don.png?resize=150%2C150&ssl=1' class='avatar avatar-40 photo' height='40' width='40' /></noscript>                    </a>
+                </span>
+                <span class="author-meta">
+                    <span class="post-name">
+                    <a href="https://blog.logrocket.com/author/ebenezerdon/">Ebenezer Don</a></span><br>
+                    <span class="post-date">Nov 25, 2019</span>
+                    <span class="dot"></span>
+                    <span class="readingtime">5 min read</span>
+                </span>
+                <span class="post-read-more">
+                    <a href="https://blog.logrocket.com/use-hooks-and-context-not-react-and-redux/" title="">
+                    <svg class="svgIcon-use" width="25" height="25" viewBox="0 0 25 25">
+                        <path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path>
+                    </svg>
+                    </a>
+                </span>            </div>
+        </div>
+    </div>
+</div>
+        </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+            
+<div class="card post height262">
+<a class="thumbimage" href="https://blog.logrocket.com/a-practical-guide-to-accessibility-for-forms/" style="background-image:url(https://i0.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/accessibility-for-forms.jpeg?fit=730%2C488&amp;ssl=1);"></a><div class="card-block">
+    <h2 class="card-title">
+        <a href="https://blog.logrocket.com/a-practical-guide-to-accessibility-for-forms/">A practical guide to accessibility for forms</a>
+    </h2>
+            <div class="metafooter">
+            <div class="wrapfooter">
+                <span class="meta-footer-thumb">
+                    <a href="https://blog.logrocket.com/author/adewaleabati/">
+                    <img alt="" src="./Having fun with ES6 proxies - LogRocket Blog_files/adewaleabati.jpeg" class="avatar avatar-40 photo jetpack-lazy-image jetpack-lazy-image--handled" height="40" width="40" data-lazy-loaded="1"><noscript><img alt='' src='https://i1.wp.com/blog.logrocket.com/wp-content/uploads/2019/04/adewaleabati.jpeg?resize=150%2C150&ssl=1' class='avatar avatar-40 photo' height='40' width='40' /></noscript>                    </a>
+                </span>
+                <span class="author-meta">
+                    <span class="post-name">
+                    <a href="https://blog.logrocket.com/author/adewaleabati/">Adewale Abati</a></span><br>
+                    <span class="post-date">Nov 25, 2019</span>
+                    <span class="dot"></span>
+                    <span class="readingtime">5 min read</span>
+                </span>
+                <span class="post-read-more">
+                    <a href="https://blog.logrocket.com/a-practical-guide-to-accessibility-for-forms/" title="">
+                    <svg class="svgIcon-use" width="25" height="25" viewBox="0 0 25 25">
+                        <path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path>
+                    </svg>
+                    </a>
+                </span>            </div>
+        </div>
+    </div>
+</div>
+        </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+            
+<div class="card post height262">
+<a class="thumbimage" href="https://blog.logrocket.com/writing-end-to-end-tests-for-graphql-servers-using-jest/" style="background-image:url(https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2019/11/GraphQL-JEST-nocdn.png?fit=730%2C412&amp;ssl=1);"></a><div class="card-block">
+    <h2 class="card-title">
+        <a href="https://blog.logrocket.com/writing-end-to-end-tests-for-graphql-servers-using-jest/">Writing end-to-end tests for GraphQL servers using Jest</a>
+    </h2>
+            <div class="metafooter">
+            <div class="wrapfooter">
+                <span class="meta-footer-thumb">
+                    <a href="https://blog.logrocket.com/author/iamgbols/">
+                    <img alt="" src="./Having fun with ES6 proxies - LogRocket Blog_files/i-am-g-bols-nocdn.png" class="avatar avatar-40 photo jetpack-lazy-image jetpack-lazy-image--handled" height="40" width="40" data-lazy-loaded="1"><noscript><img alt='' src='https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2019/09/i-am-g-bols-nocdn.png?resize=150%2C150&ssl=1' class='avatar avatar-40 photo' height='40' width='40' /></noscript>                    </a>
+                </span>
+                <span class="author-meta">
+                    <span class="post-name">
+                    <a href="https://blog.logrocket.com/author/iamgbols/">Gbolahan Olagunju</a></span><br>
+                    <span class="post-date">Nov 24, 2019</span>
+                    <span class="dot"></span>
+                    <span class="readingtime">5 min read</span>
+                </span>
+                <span class="post-read-more">
+                    <a href="https://blog.logrocket.com/writing-end-to-end-tests-for-graphql-servers-using-jest/" title="">
+                    <svg class="svgIcon-use" width="25" height="25" viewBox="0 0 25 25">
+                        <path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path>
+                    </svg>
+                    </a>
+                </span>            </div>
+        </div>
+    </div>
+</div>
+        </div>
+            </div>
+    <div class="clearfix"></div>
+                
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div id="comments" class="comments-area">
+
+	
+		<div id="respond" class="comment-respond">
+							<h3 id="reply-title" class="comment-reply-title">Leave a Reply					<small><a rel="nofollow" id="cancel-comment-reply-link" href="https://blog.logrocket.com/having-fun-with-es6-proxies/#respond" style="display:none;">Cancel reply</a></small>
+				</h3>
+						<form id="commentform" class="comment-form">
+				<iframe title="Comment Form" src="./Having fun with ES6 proxies - LogRocket Blog_files/saved_resource(4).html" style="width: 100%; height: 58px; border: 0px;" name="jetpack_remote_comment" class="jetpack_remote_comment" id="jetpack_remote_comment" sandbox="allow-same-origin allow-top-navigation allow-scripts allow-forms allow-popups" scrolling="no"></iframe>
+									<!--[if !IE]><!-->
+					<script>
+						document.addEventListener('DOMContentLoaded', function () {
+							var commentForms = document.getElementsByClassName('jetpack_remote_comment');
+							for (var i = 0; i < commentForms.length; i++) {
+								commentForms[i].allowTransparency = false;
+								commentForms[i].scrolling = 'no';
+							}
+						});
+					</script>
+					<!--<![endif]-->
+							<input id="ak_js" name="ak_js" type="hidden" value="1574751731618"></form>
+		</div>
+
+		
+		<input type="hidden" name="comment_parent" id="comment_parent" value="">
+
+		
+</div><!-- #comments -->
+</div>
+</div>        </div>                 
+    </div>
+
+    <div class="alertbar" style="display: block;"> 
+        <div class="container text-center"> 
+                    </div>
+    </div>
+
+</div><!-- /.site-content -->
+        
+        <div class="container">
+            <footer class="footer"> 
+                <div class="pull-left"> We just moved our blog! Does something seem off? Email <a>support@logrocket.com</a> </div> 
+                <div class="pull-right"> <div class="footerRight"><div id="jetpack-search-filters-2-wrapper" class="">
+		<div class="jetpack-search-form"><form role="search" method="get" class="search-form" action="https://blog.logrocket.com/">
+<input type="hidden" name="post_type" value="post">
+<input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:">
+<button type="submit" class="search-submit">
+<i class="fa fa-search"></i>   
+</button>
+<input type="hidden" name="orderby" value="relevance"><input type="hidden" name="order" value="DESC"><input type="hidden" name="post_type" value="post"></form></div></div></div>  </div> 
+                <div class="clearfix"></div>
+                <a href="https://blog.logrocket.com/having-fun-with-es6-proxies/" class="back-to-top hidden-md-down" style="display: inline;"> 
+                <i class="fa fa-angle-up"></i>
+                </a>
+            </footer>
+        </div>
+        <script>
+  var ai_insert_20 = function(){
+    ai_insert ('prepend', '.mediumnavigation', b64d ('PGRpdiBjbGFzcz0nY29kZS1ibG9jayBjb2RlLWJsb2NrLTIwJyBzdHlsZT0nbWFyZ2luOiA4cHggMDsgY2xlYXI6IGJvdGg7Jz4KPGEgaHJlZj0iaHR0cHM6Ly9ibG9nLmxvZ3JvY2tldC5jb20vcmV0aGlua2luZy1mcm9udGVuZC1hcG0vIj48ZGl2IGNsYXNzPSJtZXRyaWNzLWJhbm5lciI+CjxkaXYgaWQ9Im1ldHJpY3MtZW1iZWQiPgo8aDY+TmV3OiBMb2dSb2NrZXQgTWV0cmljcyAtIFBlcmZvcm1hbmNlIE1vbml0b3JpbmcgZm9yIEZyb250ZW5kOiA8c3BhbiBzdHlsZT0idGV4dC1kZWNvcmF0aW9uOnVuZGVybGluZTsiPlNlZSB0aGUgQW5ub3VuY2VtZW50PC9zcGFuPiAmIzg1OTQ7PC9oNj4KPC9kaXY+CjwvZGl2PjwvYT4KCjxzdHlsZT4KLm1ldHJpY3MtYmFubmVyIHtwYWRkaW5nOiA4cHggMHB4OyBiYWNrZ3JvdW5kOiAjNzY0YWJjCjtjb2xvcjogI2ZmZmZmZjt9Ci5tZXRyaWNzLWJhbm5lciBoNiB7Y29sb3I6ICNmZmZmZmY7dGV4dC1hbGlnbjpjZW50ZXI7IG1hcmdpbjogMHB4ICFpbXBvcnRhbnQ7fQojbWV0cmljcy1lbWJlZCB7d2lkdGg6IDQ4LjUlOyBtYXJnaW46IDBweCBhdXRvOyBkaXNwbGF5OiBibG9jazt9Ci5jb2RlLWJsb2NrLTIwIHttYXJnaW46IDBweCAhaW1wb3J0YW50OyBkaXNwbGF5Om5vbmU7fQoubWVkaXVtbmF2aWdhdGlvbiB7cGFkZGluZzogMHB4IDBweCA4cHggMHB4O30KLm5hdmFyZWEge3BhZGRpbmctdG9wOiAxMHB4O30KPC9zdHlsZT4KPC9kaXY+Cg=='));
+  };
+  if (document.readyState === 'complete' || (document.readyState !== 'loading' && !document.documentElement.doScroll)) ai_insert_20 (); else document.addEventListener ('DOMContentLoaded', ai_insert_20);
+</script>
+<script>
+setTimeout (function() {Array.prototype.forEach.call (document.querySelectorAll (".ai-viewports"), function (element, index) {ai_insert_code (element);});}, 10);
+
+</script>
+<!--  -->
+<script>window.onload = function() {
+    if (window.jQuery) {
+      jQuery(document).ready(function() {
+        if(jQuery(('.text-capitalize').length) && (typeof heap !== 'undefined'))
+        {
+         var postLength = jQuery('.wordcount').text();
+         var postAuthor = jQuery('.text-capitalize').first().text();
+         var postAuthorclean = postAuthor.replace(' Follow','').replace('                                ','');
+         heap.track('Post Author', {'Author': postAuthorclean});
+         heap.track('Post Length', {'Length': postLength});
+       }
+       if (typeof hljs !== 'undefined')
+       {
+       document.querySelectorAll('pre').forEach((block) => {
+         hljs.highlightBlock(block);
+       });
+       }
+      });
+    } else {
+      return;
+    }
+}
+</script>
+
+
+
+<script>if (typeof jQuery !== 'undefined') {
+    jQuery(function(){
+      jQuery('a[href*="/signup/"]').each(function(){
+            jQuery(this).addClass('signup-blog');
+          });    });    }</script>
+
+<script>jQuery(document).ready(function() {
+        if(typeof heap !== 'undefined')
+        {
+          setTimeout(function(){
+            heap.track('View Greater 30s', '> 30s');
+          },30000);
+             }
+      });</script>	<div style="display:none">
+	<div class="grofile-hash-map-d88c1619853a3f5e033667dc3c355cc9">
+	</div>
+	<div class="grofile-hash-map-91337866b9e7a7c13894f52498020ebb">
+	</div>
+	<div class="grofile-hash-map-f5258b45cd9493b1352b0880964ecf56">
+	</div>
+	<div class="grofile-hash-map-8cd0109dca23490056641473d83e5288">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/blog.logrocket.com\/having-fun-with-es6-proxies\/":9477};
+	</script>
+				<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/photon.min.js.下载"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var codePrettifyLoaderBaseUrl = "https:\/\/blog.logrocket.com\/wp-content\/plugins\/code-prettify\/prettify";
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/blog.logrocket.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/scripts.js.下载"></script>
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/devicepx-jetpack.js.下载"></script>
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/tether.min.js.下载"></script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/bootstrap.min.js.下载"></script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/ie10-viewport-bug-workaround.js.下载"></script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/masonry.pkgd.min.js.下载"></script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/mediumish.js.下载"></script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/comment-reply.min.js.下载"></script>
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/search-widget.js.下载"></script>
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/lazy-images.min.js.下载"></script>
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/queuehandler.min.js.下载"></script>
+<script type="text/javascript" async="async" src="./Having fun with ES6 proxies - LogRocket Blog_files/wp-embed.min.js.下载"></script>
+<script async="async" type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/form.js.下载"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/sharing.min.js.下载"></script>
+<script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-linkedin', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+
+		<!--[if IE]>
+		<script type="text/javascript">
+			if ( 0 === window.location.hash.indexOf( '#comment-' ) ) {
+				// window.location.reload() doesn't respect the Hash in IE
+				window.location.hash = window.location.hash;
+			}
+		</script>
+		<![endif]-->
+		<script type="text/javascript">
+			(function () {
+				var comm_par_el = document.getElementById( 'comment_parent' ),
+					comm_par = ( comm_par_el && comm_par_el.value ) ? comm_par_el.value : '',
+					frame = document.getElementById( 'jetpack_remote_comment' ),
+					tellFrameNewParent;
+
+				tellFrameNewParent = function () {
+					if ( comm_par ) {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=161333275&postid=9477&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=7.9.1&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=1acb0f2b7b033d4cbf7e2da62bfd58fa1990c12d#parent=https%3A%2F%2Fblog.logrocket.com%2Fhaving-fun-with-es6-proxies%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+					} else {
+						frame.src = "https://jetpack.wordpress.com/jetpack-comment/?blogid=161333275&postid=9477&comment_registration=0&require_name_email=1&stc_enabled=1&stb_enabled=1&show_avatars=1&avatar_default=mystery&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en_US&jetpack_version=7.9.1&show_cookie_consent=10&has_cookie_consent=0&token_key=%3Bnormal%3B&sig=1acb0f2b7b033d4cbf7e2da62bfd58fa1990c12d#parent=https%3A%2F%2Fblog.logrocket.com%2Fhaving-fun-with-es6-proxies%2F";
+					}
+				};
+
+				
+				if ( 'undefined' !== typeof addComment ) {
+					addComment._Jetpack_moveForm = addComment.moveForm;
+
+					addComment.moveForm = function ( commId, parentId, respondId, postId ) {
+						var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ),
+							cancelClick, cancel;
+
+						if ( false === returnValue ) {
+							cancel = document.getElementById( 'cancel-comment-reply-link' );
+							cancelClick = cancel.onclick;
+							cancel.onclick = function () {
+								var cancelReturn = cancelClick.call( this );
+								if ( false !== cancelReturn ) {
+									return cancelReturn;
+								}
+
+								if ( ! comm_par ) {
+									return cancelReturn;
+								}
+
+								comm_par = 0;
+
+								tellFrameNewParent();
+
+								return cancelReturn;
+							};
+						}
+
+						if ( comm_par == parentId ) {
+							return returnValue;
+						}
+
+						comm_par = parentId;
+
+						tellFrameNewParent();
+
+						return returnValue;
+					};
+				}
+
+				
+				// Do the post message bit after the dom has loaded.
+				document.addEventListener( 'DOMContentLoaded', function () {
+					var iframe_url = "https:\/\/jetpack.wordpress.com";
+					if ( window.postMessage ) {
+						if ( document.addEventListener ) {
+							window.addEventListener( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						} else if ( document.attachEvent ) {
+							window.attachEvent( 'message', function ( event ) {
+								var origin = event.origin.replace( /^http:\/\//i, 'https://' );
+								if ( iframe_url.replace( /^http:\/\//i, 'https://' ) !== origin ) {
+									return;
+								}
+								jQuery( frame ).height( event.data );
+							});
+						}
+					}
+				})
+
+			})();
+		</script>
+
+		<script type="text/javascript" src="./Having fun with ES6 proxies - LogRocket Blog_files/e-201948.js.下载" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.9.1',blog:'161333275',post:'9477',tz:'-5',srv:'blog.logrocket.com'} ]);
+	_stq.push([ 'clickTrackerInit', '161333275', '9477' ]);
+</script>
+                 
+
+<!--
+	generated 101 seconds ago
+	generated in 0.253 seconds
+	served from batcache in 0.002 seconds
+	expires in 199 seconds
+-->
+<img src="./Having fun with ES6 proxies - LogRocket Blog_files/g.gif" alt=":)" width="6" height="5" id="wpstats"><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" aria-hidden="true" tabindex="-1" title="Intercom" src="./Having fun with ES6 proxies - LogRocket Blog_files/saved_resource(5).html"></iframe><div id="intercom-css-container"><style data-emotion="intercom-global"></style></div><div id="intercom-container" class="intercom-namespace"><style>html.intercom-mobile-messenger-active,html.intercom-mobile-messenger-active > body,html.intercom-modal-open,#intercom-container-body{overflow:hidden !important;}html.intercom-mobile-messenger-active,html.intercom-mobile-messenger-active > body{position:static !important;}html.intercom-mobile-messenger-active > body{height:0 !important;margin:0 !important;}iframe#intercom-frame{position:absolute !important;opacity:0 !important;width:1px !important;height:1px !important;top:0 !important;left:0 !important;border:none !important;display:block !important;z-index:-1 !important;}</style><div class="intercom-app" aria-live="polite"><div id="intercom-modal-container"></div></div></div><script src="./Having fun with ES6 proxies - LogRocket Blog_files/adsct" type="text/javascript"></script><script src="./Having fun with ES6 proxies - LogRocket Blog_files/adsct" type="text/javascript"></script><script src="./Having fun with ES6 proxies - LogRocket Blog_files/adsct" type="text/javascript"></script></body></html>

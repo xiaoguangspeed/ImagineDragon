@@ -21,3 +21,10 @@ Object.defineProperty(person, 'name', {
 })
 console.log(person.name)
 person.name = 'gaga'
+
+
+//解构赋值语法是一种 Javascript 表达式。通过解构赋值, 可以将属性/值从对象/数组中取出,赋值给其他变量。
+function lazy({ mode = 'async', method = 'run' }) {
+  console.log(mode, method)
+}
+console.log(lazy({mode: 'sync',method: 'run'}))
